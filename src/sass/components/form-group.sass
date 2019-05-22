@@ -2,27 +2,26 @@
    $parent: &
    position: relative
    overflow: hidden
-   
    &__control
-      height: 50px
+      height: 38px
       width: 100%
-      padding: 0 20px 0 50px
+      padding-left: 30px
       +f('hel700', 24)
-      line-height: 50px
+      line-height: 1
       border-bottom: 1px solid #979797
       background: 0
       color: #000
    
    &__icon
       position: absolute
-      top: 0
+      top: 2px
       left: 0
    
    &__label
       position: absolute
       top: 0
       left: 40px
-      right: 20px
+      right: 0
       bottom: 0
       color: rgba(#D0021B, .34)
       +f('hel700', 24)
@@ -36,6 +35,7 @@
    &__error
       @extend .form-group__label
       transform: translateY(100%)
+      color: $red
       transition: .3s ease-in-out
       #{$parent}.is-error &
          opacity: 1

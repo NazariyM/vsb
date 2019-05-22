@@ -1,21 +1,28 @@
 .ingreds
-   padding: 30px 35px
+   padding: 49px 22px 40px 38px
    background-color: rgba(#E1E3F7, .24)
+   border-width: 2px
    border-color: $light-green-2
    color: #626263
    
    &__title
-      margin-bottom: 15px
+      margin-bottom: 26px
    
    &__name-field
-      margin-bottom: 30px
+      padding-left: 5px
+      padding-right: 15px
+      margin-left: -5px
+      margin-bottom: 27px
+   
+   &__list
+      margin-bottom: 52px
    
    &__item
       display: flex
       align-items: flex-start
       
       &:not(:last-child)
-         margin-bottom: 15px
+         margin-bottom: 22px
       
       &-text
          flex: 1 1 auto
@@ -23,6 +30,7 @@
       
       &-name
          display: block
+         margin-bottom: 4px
          +fs(18)
       
       &-portion
@@ -32,6 +40,7 @@
       display: flex
       align-items: center
       flex: 0 0 105px
+      margin-top: -6px
       color: rgba(#373737, .44)
       
       &-control
@@ -66,8 +75,8 @@
    &__status
       display: flex
       align-items: center
-      padding: 10px 15px
-      margin-bottom: 37px
+      margin: 0 0 37px -20px
+      padding: 16px 15px
       border: 1px solid $light-green-2
       border-radius: 22px
       +f('hel700', 22)
@@ -75,13 +84,16 @@
       
       &-title
          flex: 1 1 auto
-      
+         font-size: inherit
+   
       &-count
-         flex: 0 0 100px
+         flex: 0 0 110px
+   
    &__actions
       display: flex
-      margin: 0 -10px
+      margin: 0 0 0 -22px
       font-size: 0
+      
       &-btn
          width: calc(50% - 10px)
          margin: 0 5px

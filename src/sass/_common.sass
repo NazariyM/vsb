@@ -13,6 +13,7 @@ body
    padding: 0 24px 0 50px
 
 .main
+   overflow: hidden
    padding-bottom: 80px
    background-color: $light-gray
 
@@ -28,9 +29,11 @@ body
       color: #373737
 
 .btn
+   position: relative
    display: inline-flex
+   text-align: right
+   justify-content: flex-end
    align-items: center
-   padding: 10px 15px
    color: $white
    min-height: 78px
    border-radius: 50px
@@ -38,19 +41,28 @@ body
    transition: .3s ease-in-out
    
    &_blue
+      padding: 10px 26px 15px 52px
       background-color: $blue
       
       &:hover
          background-color: darken($blue, 8)
    
    &_green
+      padding: 10px 38px 15px 52px
       background-color: $light-green
       
       &:hover
          background-color: darken($light-green, 8)
    
-   .icon-chain
-      transform: rotate(45deg)
+   &__icon
+      position: absolute
+      &.icon-download
+         top: calc(50% - 14px)
+         left: 21px
+      &.icon-chain
+         left: 14px
+         top: calc(50% - 23px)
+         transform: rotate(45deg)
 
 .link
    $parent: &

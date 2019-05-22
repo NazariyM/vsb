@@ -1,22 +1,23 @@
 .content
    padding: 60px 0 0
-   
+   &__container
+      padding: 0 24px 0 52px
    &__title
-      margin-bottom: 30px
+      margin-bottom: 44px
    
    &__inner
       display: flex
       margin: 0 -11px
    
    &__categories
-      //flex-basis: percentage(884 / 1388)
-      width: percentage(884 / 1388)
+      width: percentage(906 / 1364)
       padding: 0 11px
+      flex-grow: 0
    
    &__side
-      //flex-basis: percentage(457 / 1388)
-      width: percentage(457 / 1388)
+      width: percentage(479 / 1364)
       padding: 0 11px
+      flex-grow: 0
    
    &__block
       border: 1px solid
@@ -30,17 +31,18 @@
    display: flex
    align-items: center
    width: 100%
-   padding: 20px 25px
+   padding: 22px 30px 27px 40px
    background: 0
    &__icon
-      margin-right: 30px
-      +fs(20)
+      margin-top: 4px
+      margin-right: 24px
+      +fs(26)
       fill: none
       stroke: currentColor
-      transition: .3s ease-in-out
+      transition: .35s ease-in-out
       #{$parent}.is-open &
          transform: rotate(90deg)
       
    &__content
       overflow: hidden
-      transition: .3s ease-in-out
+      transition: .35s ease-in-out

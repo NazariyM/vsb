@@ -1,4 +1,4 @@
-import { css, throttle } from '../dev/helpers'
+import { css } from '../dev/helpers'
 
 class ExpandBlock {
   constructor(el) {
@@ -14,33 +14,44 @@ class ExpandBlock {
 
   init() {
     this.setHeight()
-    this.onResize()
     this.bindEvents()
   }
 
   bindEvents() {
     this.block.addEventListener('click', () => this.toggleContent())
-  }
-
-  onResize() {
-    window.addEventListener('resize', throttle(() => this.setHeight))
+    this.content.addEventListener(
+      'transitionend',
+      this.setAutoHeight.bind(this)
+    )
   }
 
   setHeight() {
     this.initHeight = this.content.offsetHeight
 
     if (this.block.classList.contains(css.open))
-      this.content.style.height = `${this.content.offsetHeight}px`
+      this.content.style.height = 'auto'
     else this.content.style.height = '0px'
   }
 
   toggleContent() {
     if (this.block.classList.contains(css.open)) {
-      this.content.style.height = '0px'
+      this.initHeight = this.content.offsetHeight
+      this.content.style.height = `${this.initHeight}px`
+
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          this.content.style.height = '0px'
+        })
+      })
     } else {
       this.content.style.height = `${this.initHeight}px`
     }
     this.block.classList.toggle(css.open)
+  }
+
+  setAutoHeight() {
+    if (this.block.classList.contains(css.open))
+      this.content.style.height = 'auto'
   }
 }
 

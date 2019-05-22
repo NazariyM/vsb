@@ -64,12 +64,11 @@ block content
 								+e.BUTTON.head.expand-block.js-expand-block
 									+icon('arrow', 'category__head-arrow expand-block__icon')
 									+e.H4.title.title._md= contentItem[0]
-									+e.head-icon-wrap
-										if idx === 2
-											+e.head-icon(class= `icon-${contentItem[1][0]}`)
-											+e.head-icon(class= `icon-${contentItem[1][1]}`)
-										else
-											+e.head-icon(class= `icon-${contentItem[1]}`)
+									if idx === 2
+										+e.head-icon(class= `icon-${contentItem[1][0]}`)
+										+e.head-icon(class= `icon-${contentItem[1][1]}`)
+									else
+										+e.head-icon(class= `icon-${contentItem[1]}`)
 
 								+e.content.expand-block__content
 									+e.content-inner
@@ -112,28 +111,29 @@ block content
 								'Olive Oil',
 								'Romaine Lettuce Extra']
 
-							for text in ingredientsList
-								+e.item
-									+e.item-text
-										+e.SPAN.item-name.title= text
-										+e.SPAN.item-portion 2 cups
+							+e.list
+								for text in ingredientsList
+									+e.item
+										+e.item-text
+											+e.SPAN.item-name.title= text
+											+e.SPAN.item-portion 2 cups
 
-									+e.count.js-click-count
-										+e.BUTTON.count-btn._minus.js-click-count-minus
-											span –
-										+e.INPUT.count-control.js-click-count-display(type='text' value='1' name='ingredCount' readonly)
-										+e.BUTTON.count-btn._plus.js-click-count-plus
-											span +
+										+e.count.js-click-count
+											+e.BUTTON.count-btn._minus.js-click-count-minus
+												span –
+											+e.INPUT.count-control.js-click-count-display(type='text' value='1' name='ingredCount' readonly)
+											+e.BUTTON.count-btn._plus.js-click-count-plus
+												span +
 
 							+e.status
 								+e.H5.status-title.title Approximate net weight
 								+e.SPAN.status-count 0.7 lbs
 
 							+e.actions
-								+b.BUTTON.btn._blue.__actions-btn(type='button')
+								+b.BUTTON.btn._blue.__actions-btn
 									+e.icon.icon-download
 									+e.SPAN.actions-btn-text Print (PDF)
-								+b.BUTTON.btn._green.__actions-btn(type='button')
+								+b.BUTTON.btn._green.__actions-btn
 									+e.icon.icon-chain
 									+e.SPAN.actions-btn-text Copy link
 						//end ingreds
@@ -141,20 +141,20 @@ block content
 						//begin info
 						+b.info.__block
 							+e.BUTTON.head.expand-block.js-expand-block.is-open
-								+e.head-icon
-									+icon('arrow', 'info__head-arrow expand-block__icon')
+								+icon('arrow', 'info__head-arrow expand-block__icon')
 								+e.H3.head-title.title._md Full ingredients list
 							+e.content.expand-block__content
 								+e.content-inner
 									-
 										infoList = [
-										['Romaine Lettuce Extra Double'],
-										['Buffalo Style White Meat Chicken Salad with second and third line description', ['(expeller pressed canola oil, cage free egg yolks, water,', 'honey, distilled vinegar, cage free whole egg, contains less than 2% of salt, spice, lemon juice concentrate),', 'Sugar, Water,', 'Roasted Red Peppers (citric acid)']],
-										['Olive Oil', ['Lemon Juice (from concentrate),', 'Salt,', 'Ascorbic Acid,', 'Gum (xanthan gum, guar gum, sodium alginate).', 'CONTAINS: EGG']]]
+										[['Romaine Lettuce Extra Double']],
+										[['Buffalo Style White Meat', 'Chicken Salad with second', 'and third line description'], ['(expeller pressed canola oil, cage free egg yolks, water,', 'honey, distilled vinegar, cage free whole egg, contains less than 2% of salt, spice, lemon juice concentrate),', 'Sugar, Water,', 'Roasted Red Peppers (citric acid)']],
+										[['Olive Oil'], ['Lemon Juice (from concentrate),', 'Salt,', 'Ascorbic Acid,', 'Gum (xanthan gum, guar gum, sodium alginate).', 'CONTAINS: EGG']]]
 
 									for infoText in infoList
 										+e.DL.list
-											+e.DT.list-term= infoText[0]
+											each text in infoText[0]
+												+e.DT.list-term= text
 											if infoText[1]
 												each text in infoText[1]
 													+e.DD.list-def= text
@@ -163,8 +163,7 @@ block content
 						//begin summary
 						+b.SECTION.summary.__block
 							+e.BUTTON.head.expand-block.js-expand-block.is-open
-								+e.head-icon
-									+icon('arrow', 'summary__head-arrow expand-block__icon')
+								+icon('arrow', 'summary__head-arrow expand-block__icon')
 								+e.H3.head-title.title._md Nutrition facts
 							+e.content.expand-block__content
 								+e.content-inner
@@ -177,63 +176,64 @@ block content
 											+e.stat-term Calories
 											+e.stat-def 475
 
-										+e.TABLE.table
+										+e.table-wrap
+											+e.TABLE.table
 
-											+e.TBODY.table-body
-												+e.TR.table-row
-													+e.TD.table-data
-													+e.TD.table-data
-														+e.table-data-symbol ?
-														| APS*
-													+e.TD.table-data
-														+e.table-data-symbol ?
-														| %DV**
+												+e.TBODY.table-body
+													+e.TR.table-row
+														+e.TD.table-data
+														+e.TD.table-data
+															+e.table-data-symbol ?
+															| APS*
+														+e.TD.table-data
+															+e.table-data-symbol ?
+															| %DV**
 
-											+e.TBODY.table-body
-												+e.TR.table-row
-													+e.TD.table-data Total Fat
-													+e.TD.table-data 33g
-													+e.TD.table-data 51%
-												+e.TR.table-row
-													+e.TD.table-data Satured Fat
-													+e.TD.table-data 3.5g
-													+e.TD.table-data 18%
-												+e.TR.table-row
-													+e.TD.table-data Trans Fat
-													+e.TD.table-data 0g
-													+e.TD.table-data 0%
+												+e.TBODY.table-body
+													+e.TR.table-row
+														+e.TD.table-data Total Fat
+														+e.TD.table-data 33g
+														+e.TD.table-data 51%
+													+e.TR.table-row
+														+e.TD.table-data Satured Fat
+														+e.TD.table-data 3.5g
+														+e.TD.table-data 18%
+													+e.TR.table-row
+														+e.TD.table-data Trans Fat
+														+e.TD.table-data 0g
+														+e.TD.table-data 0%
 
-											+e.TBODY.table-body
-												+e.TR.table-row
-													+e.TD.table-data Cholesterol
-													+e.TD.table-data 33g
-													+e.TD.table-data 51%
+												+e.TBODY.table-body
+													+e.TR.table-row
+														+e.TD.table-data Cholesterol
+														+e.TD.table-data 33g
+														+e.TD.table-data 51%
 
-											+e.TBODY.table-body
-												+e.TR.table-row
-													+e.TD.table-data Sodium
-													+e.TD.table-data 1485g
-													+e.TD.table-data 51%
+												+e.TBODY.table-body
+													+e.TR.table-row
+														+e.TD.table-data Sodium
+														+e.TD.table-data 1485g
+														+e.TD.table-data 51%
 
-											+e.TBODY.table-body
-												+e.TR.table-row
-													+e.TD.table-data Total Carbs
-													+e.TD.table-data 1485g
-													+e.TD.table-data 51%
-												+e.TR.table-row
-													+e.TD.table-data Dietary Fiber
-													+e.TD.table-data 3.5g
-													+e.TD.table-data 18%
-												+e.TR.table-row
-													+e.TD.table-data Sugar
-													+e.TD.table-data 0g
-													+e.TD.table-data 0%
+												+e.TBODY.table-body
+													+e.TR.table-row
+														+e.TD.table-data Total Carbs
+														+e.TD.table-data 1485g
+														+e.TD.table-data 51%
+													+e.TR.table-row
+														+e.TD.table-data Dietary Fiber
+														+e.TD.table-data 3.5g
+														+e.TD.table-data 18%
+													+e.TR.table-row
+														+e.TD.table-data Sugar
+														+e.TD.table-data 0g
+														+e.TD.table-data 0%
 
-											+e.TBODY.table-body
-												+e.TR.table-row
-													+e.TD.table-data Protein
-													+e.TD.table-data 1485g
-													+e.TD.table-data 51%
+												+e.TBODY.table-body
+													+e.TR.table-row
+														+e.TD.table-data Protein
+														+e.TD.table-data 1485g
+														+e.TD.table-data 51%
 
 									+e.info
 										-
@@ -252,10 +252,10 @@ block content
 										-
 											summaryHintList = [
 											'* Amount Per Serving',
-											'** Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs']
+											'** Percent Daily Values are based on a 2,000 calorie diet. <span>Your daily values may be higher or lower depending on your calorie needs</span>']
 
 										for text in summaryHintList
-											+e.P.hint-text= text
+											+e.P.hint-text!= text
 
 									+e.warn
 										+e.warn-head

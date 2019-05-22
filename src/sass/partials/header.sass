@@ -1,20 +1,23 @@
 .header
-   padding: 15px 0
+   padding: 22px 0 11px
    background-color: $white
    
    &__container
       display: flex
       align-items: center
       justify-content: space-between
+      padding: 0 157px 0 57px
    
    &__bar-logo
       position: relative
       +flexCenter
       width: 150px
       height: 150px
-      padding: 20px
+      margin-top: -8px
+      padding: 25px
       text-align: center
-      +f('din400', 24)
+      +f('din400', 22)
+      line-height: 1
       letter-spacing: 0.025em
       font-weight: 700
       background-color: $light-green
@@ -26,20 +29,25 @@
       &::before
          +vcenter
          z-index: 1
-         width: 90%
-         height: 90%
+         width: 76%
+         height: 76%
          border: 3px solid $white
          content: ''
+         
+      &-text
+         padding-top: 5px
    
    &__main-logo
+      margin: 55px 0 40px 176px
       +hide-text
    
    &__link
       $parent: &
       position: relative
+      margin-top: 25px
       color: $red
-      border-bottom: em(2, 30) solid currentColor
       +f('hel700', 30)
+      border-bottom: em(2, 30) solid currentColor
       line-height: 1
       transition: .3s ease-in-out
       
@@ -48,7 +56,7 @@
       
       &-icon
          position: absolute
-         top: -0.75em
-         right: -0.75em
+         top: -0.85em
+         right: -0.25em
          font-size: 18px
          transition: .3s ease-in-out
