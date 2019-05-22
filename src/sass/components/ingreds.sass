@@ -1,0 +1,87 @@
+.ingreds
+   padding: 30px 35px
+   background-color: rgba(#E1E3F7, .24)
+   border-color: $light-green-2
+   color: #626263
+   
+   &__title
+      margin-bottom: 15px
+   
+   &__name-field
+      margin-bottom: 30px
+   
+   &__item
+      display: flex
+      align-items: flex-start
+      
+      &:not(:last-child)
+         margin-bottom: 15px
+      
+      &-text
+         flex: 1 1 auto
+         padding-right: 15px
+      
+      &-name
+         display: block
+         +fs(18)
+      
+      &-portion
+         +fs(15)
+   
+   &__count
+      display: flex
+      align-items: center
+      flex: 0 0 105px
+      color: rgba(#373737, .44)
+      
+      &-control
+         width: 40px
+         background: 0
+         text-align: center
+         +f('hel700', 20)
+         color: inherit
+      
+      &-btn
+         width: 35px
+         height: 35px
+         line-height: 1
+         +f('hel700', 20)
+         color: inherit
+         border-radius: 50%
+         transition: .3s ease-in-out
+         
+         &:hover
+            box-shadow: inset 0 0 10px currentColor
+         
+         &_minus
+            background-color: rgba(#9B9B9B, .16)
+         
+         &_plus
+            background-color: #DCF2EA
+         
+         span
+            position: relative
+            top: -3px
+   
+   &__status
+      display: flex
+      align-items: center
+      padding: 10px 15px
+      margin-bottom: 37px
+      border: 1px solid $light-green-2
+      border-radius: 22px
+      +f('hel700', 22)
+      text-align: center
+      
+      &-title
+         flex: 1 1 auto
+      
+      &-count
+         flex: 0 0 100px
+   &__actions
+      display: flex
+      margin: 0 -10px
+      font-size: 0
+      &-btn
+         width: calc(50% - 10px)
+         margin: 0 5px

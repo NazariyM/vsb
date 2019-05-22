@@ -1,0 +1,92 @@
+.category
+   $parent: &
+   //padding: 0 20px
+   box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
+   border-radius: 22px
+   &.is-active
+      border-color: $light-green-2
+   
+   &_default
+      &:not(:first-child)
+         margin-top: 36px
+   
+   &__head
+      padding: 10px 40px
+      //margin: 0 -20px
+      
+      &-arrow
+         margin-right: 38px
+         stroke: $light-green
+         
+      &-icon
+         &-wrap
+            margin-left: auto
+   
+   &__title
+      color: $light-green
+   
+   &__content
+      &-inner
+         padding: 10px 20px 30px
+         display: flex
+         align-items: flex-start
+         flex-wrap: wrap
+   
+   &__comp
+      position: relative
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      width: calc(25% - 15px)
+      height: 262px
+      padding: 20px
+      border-radius: 22px
+      background-color: $white
+      cursor: pointer
+      transition: .3s ease-in-out
+      +fs(16)
+      &:nth-child(4) ~ &
+         margin-top: 15px
+         
+      &:not(:nth-child(4n))
+         margin-right: 15px
+      
+      &:hover
+         box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
+   
+      &-img-wrap
+         img
+            display: block
+            margin: 0 auto
+            width: 100%
+            
+      &-title
+         color: #717171
+   
+         font-size: inherit
+   
+      &-portion
+         display: flex
+         align-items: center
+         margin-top: auto
+         color: #9b9b9b
+         &-icon
+            display: block
+            margin-right: 6px
+         span
+            margin-right: 4px
+            
+      &-visual
+         +coverdiv
+         z-index: 1
+         border: 3px solid transparent
+         border-radius: 22px
+         transition: .3s ease-in-out
+         pointer-events: none
+      
+      &-control
+         display: none
+         
+         &:checked ~ #{$parent}__comp-visual
+            border-color: $light-green
+            box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)

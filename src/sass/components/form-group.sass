@@ -1,0 +1,42 @@
+.form-group
+   $parent: &
+   position: relative
+   overflow: hidden
+   
+   &__control
+      height: 50px
+      width: 100%
+      padding: 0 20px 0 50px
+      +f('hel700', 24)
+      line-height: 50px
+      border-bottom: 1px solid #979797
+      background: 0
+      color: #000
+   
+   &__icon
+      position: absolute
+      top: 0
+      left: 0
+   
+   &__label
+      position: absolute
+      top: 0
+      left: 40px
+      right: 20px
+      bottom: 0
+      color: rgba(#D0021B, .34)
+      +f('hel700', 24)
+      pointer-events: none
+      transition: .3s .05s ease-in-out
+   
+      #{$parent}.is-filled &,
+      #{$parent}__control:focus ~ &
+         transform: translateY(100%)
+   
+   &__error
+      @extend .form-group__label
+      transform: translateY(100%)
+      transition: .3s ease-in-out
+      #{$parent}.is-error &
+         opacity: 1
+         transform: translateY(0)

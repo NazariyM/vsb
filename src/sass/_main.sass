@@ -1,0 +1,46 @@
+.content
+   padding: 60px 0 0
+   
+   &__title
+      margin-bottom: 30px
+   
+   &__inner
+      display: flex
+      margin: 0 -11px
+   
+   &__categories
+      //flex-basis: percentage(884 / 1388)
+      width: percentage(884 / 1388)
+      padding: 0 11px
+   
+   &__side
+      //flex-basis: percentage(457 / 1388)
+      width: percentage(457 / 1388)
+      padding: 0 11px
+   
+   &__block
+      border: 1px solid
+      border-radius: 22px
+      box-shadow: 13px 7px 30px rgba($black, .21)
+      &:not(:last-child)
+         margin-bottom: 30px
+
+.expand-block
+   $parent: &
+   display: flex
+   align-items: center
+   width: 100%
+   padding: 20px 25px
+   background: 0
+   &__icon
+      margin-right: 30px
+      +fs(20)
+      fill: none
+      stroke: currentColor
+      transition: .3s ease-in-out
+      #{$parent}.is-open &
+         transform: rotate(90deg)
+      
+   &__content
+      overflow: hidden
+      transition: .3s ease-in-out

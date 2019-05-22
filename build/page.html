@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Virtual Salad Bar</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--begin header-->
+      <header class="header">
+        <div class="header__container container"><a class="header__bar-logo" href="#!">VIRTUAL SALAD BAR</a><a class="header__main-logo" href="#!">
+            <div class="icon-main-logo"></div>
+            <h1>Harris Teeter</h1>
+          </a><a class="header__link" href="https://www.harristeeter.com" target="_blank">harristeeter.com<span class="header__link-icon icon-follow"></span></a></div>
+      </header>
+      <!--end header-->
+      <main class="main">
+        <!--begin popular-->
+        <section class="popular">
+          <div class="popular__container container">
+            <h2 class="popular__title title title_lg">Choose from our most popular recipes</h2>
+            <div class="popular__list js-popular-slider">
+              <div class="swiper-wrapper"><a class="popular__item swiper-slide" href="#!"><span class="popular__item-img-wrap"><img src="img/content/pop-food_1.jpg" alt="image" title="" /></span>
+                  <h6 class="popular__item-title title">Buffalo Style White Meat Chicken Salad</h6>
+                </a><a class="popular__item swiper-slide" href="#!"><span class="popular__item-img-wrap"><img src="img/content/pop-food_2.jpg" alt="image" title="" /></span>
+                  <h6 class="popular__item-title title">Apple cranberry walnut salad</h6>
+                </a><a class="popular__item swiper-slide" href="#!"><span class="popular__item-img-wrap"><img src="img/content/pop-food_3.jpg" alt="image" title="" /></span>
+                  <h6 class="popular__item-title title">Romaine Lettuce Extra Double</h6>
+                </a><a class="popular__item swiper-slide" href="#!"><span class="popular__item-img-wrap"><img src="img/content/pop-food_1.jpg" alt="image" title="" /></span>
+                  <h6 class="popular__item-title title">Buffalo Style White Meat Chicken Salad</h6>
+                </a><a class="popular__item swiper-slide" href="#!"><span class="popular__item-img-wrap"><img src="img/content/pop-food_2.jpg" alt="image" title="" /></span>
+                  <h6 class="popular__item-title title">Apple cranberry walnut salad</h6>
+                </a><a class="popular__item swiper-slide" href="#!"><span class="popular__item-img-wrap"><img src="img/content/pop-food_3.jpg" alt="image" title="" /></span>
+                  <h6 class="popular__item-title title">Romaine Lettuce Extra Double</h6>
+                </a></div>
+              <div class="popular__list-controls">
+                <div class="popular__list-btn popular__list-btn_prev"><svg class="icon icon-arrow popular__list-btn-icon">
+                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                  </svg></div>
+                <div class="popular__list-btn popular__list-btn_next"><svg class="icon icon-arrow popular__list-btn-icon">
+                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                  </svg></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--end popular-->
+        <!--begin content-->
+        <section class="content">
+          <div class="content__container container">
+            <h2 class="content__title title title_lg">or create your own custom salad</h2>
+            <div class="content__inner">
+              <div class="content__categories">
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Greens</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-salad-1"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Vegetable</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-cabbage"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Pickles &amp; Olives</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-cucumber"></div>
+                      <div class="category__head-icon icon-cherry"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Protein Salads</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-chicken"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Potato Salads</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-potato"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Vegetable Salads</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-leaf"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Marinated Salads</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-leaf"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Pasta Salads</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-chicken"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Rice, Grain &amp; Bean Salads</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-potato"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Other Prepared Salads</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-leaf"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Proteins &amp; cheeses</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-leaf"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Fruit</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-chicken"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Desserts</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-potato"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Salad Dressings</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-leaf"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+                <div class="category category_default"><button class="category__head expand-block js-expand-block"><svg class="icon icon-arrow category__head-arrow expand-block__icon">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                    <h4 class="category__title title title_md">Dry Toppings</h4>
+                    <div class="category__head-icon-wrap">
+                      <div class="category__head-icon icon-leaf"></div>
+                    </div>
+                  </button>
+                  <div class="category__content expand-block__content">
+                    <div class="category__content-inner"><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_1.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Fancy Salad</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_2.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Kale</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_3.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Baby Spinach</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_4.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Spring Mix</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_5.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Iceberg Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label><label class="category__comp"><input class="category__comp-control" type="checkbox" name="ingredient" /><span class="category__comp-img-wrap"><img src="img/content/ingredient_6.jpg" alt="image" title="" /></span>
+                        <h6 class="category__comp-title title">Romaine Lettuce</h6><span class="category__comp-portion"><span class="category__comp-portion-icon icon-cups"></span><span>2</span>cups</span><span class="category__comp-visual"></span>
+                      </label></div>
+                  </div>
+                </div>
+              </div>
+              <aside class="content__side">
+                <!--begin ingreds-->
+                <div class="ingreds content__block">
+                  <div class="form-group js-form-group ingreds__name-field">
+                    <div class="form-group__icon icon-salad-2"></div><input class="form-group__control" type="text" name="saladName" autocomplete="off" required="required" /><label class="form-group__label"><span>My salad name</span></label><span class="form-group__error">Please fill up this field</span>
+                  </div>
+                  <h3 class="ingreds__title title title_md">Ingredients</h3>
+                  <div class="ingreds__item">
+                    <div class="ingreds__item-text"><span class="ingreds__item-name title">Romaine Lettuce Extra Double</span><span class="ingreds__item-portion">2 cups</span></div>
+                    <div class="ingreds__count js-click-count"><button class="ingreds__count-btn ingreds__count-btn_minus js-click-count-minus"><span>–</span></button><input class="ingreds__count-control js-click-count-display" type="text" value="1" name="ingredCount" readonly="readonly" /><button class="ingreds__count-btn ingreds__count-btn_plus js-click-count-plus"><span>+</span></button></div>
+                  </div>
+                  <div class="ingreds__item">
+                    <div class="ingreds__item-text"><span class="ingreds__item-name title">Buffalo Style White Meat Chicken Salad with second and third line description</span><span class="ingreds__item-portion">2 cups</span></div>
+                    <div class="ingreds__count js-click-count"><button class="ingreds__count-btn ingreds__count-btn_minus js-click-count-minus"><span>–</span></button><input class="ingreds__count-control js-click-count-display" type="text" value="1" name="ingredCount" readonly="readonly" /><button class="ingreds__count-btn ingreds__count-btn_plus js-click-count-plus"><span>+</span></button></div>
+                  </div>
+                  <div class="ingreds__item">
+                    <div class="ingreds__item-text"><span class="ingreds__item-name title">Olive Oil</span><span class="ingreds__item-portion">2 cups</span></div>
+                    <div class="ingreds__count js-click-count"><button class="ingreds__count-btn ingreds__count-btn_minus js-click-count-minus"><span>–</span></button><input class="ingreds__count-control js-click-count-display" type="text" value="1" name="ingredCount" readonly="readonly" /><button class="ingreds__count-btn ingreds__count-btn_plus js-click-count-plus"><span>+</span></button></div>
+                  </div>
+                  <div class="ingreds__item">
+                    <div class="ingreds__item-text"><span class="ingreds__item-name title">Romaine Lettuce Extra</span><span class="ingreds__item-portion">2 cups</span></div>
+                    <div class="ingreds__count js-click-count"><button class="ingreds__count-btn ingreds__count-btn_minus js-click-count-minus"><span>–</span></button><input class="ingreds__count-control js-click-count-display" type="text" value="1" name="ingredCount" readonly="readonly" /><button class="ingreds__count-btn ingreds__count-btn_plus js-click-count-plus"><span>+</span></button></div>
+                  </div>
+                  <div class="ingreds__status">
+                    <h5 class="ingreds__status-title title">Approximate net weight</h5><span class="ingreds__status-count">0.7 lbs</span>
+                  </div>
+                  <div class="ingreds__actions"><button class="btn btn_blue ingreds__actions-btn" type="button">
+                      <div class="btn__icon icon-download"></div><span class="btn__actions-btn-text">Print (PDF)</span>
+                    </button><button class="btn btn_green ingreds__actions-btn" type="button">
+                      <div class="btn__icon icon-chain"></div><span class="btn__actions-btn-text">Copy link</span>
+                    </button></div>
+                </div>
+                <!--end ingreds-->
+                <!--begin info-->
+                <div class="info content__block"><button class="info__head expand-block js-expand-block is-open">
+                    <div class="info__head-icon"><svg class="icon icon-arrow info__head-arrow expand-block__icon">
+                        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                      </svg></div>
+                    <h3 class="info__head-title title title_md">Full ingredients list</h3>
+                  </button>
+                  <div class="info__content expand-block__content">
+                    <div class="info__content-inner">
+                      <dl class="info__list">
+                        <dt class="info__list-term">Romaine Lettuce Extra Double</dt>
+                      </dl>
+                      <dl class="info__list">
+                        <dt class="info__list-term">Buffalo Style White Meat Chicken Salad with second and third line description</dt>
+                        <dd class="info__list-def">(expeller pressed canola oil, cage free egg yolks, water,</dd>
+                        <dd class="info__list-def">honey, distilled vinegar, cage free whole egg, contains less than 2% of salt, spice, lemon juice concentrate),</dd>
+                        <dd class="info__list-def">Sugar, Water,</dd>
+                        <dd class="info__list-def">Roasted Red Peppers (citric acid)</dd>
+                      </dl>
+                      <dl class="info__list">
+                        <dt class="info__list-term">Olive Oil</dt>
+                        <dd class="info__list-def">Lemon Juice (from concentrate),</dd>
+                        <dd class="info__list-def">Salt,</dd>
+                        <dd class="info__list-def">Ascorbic Acid,</dd>
+                        <dd class="info__list-def">Gum (xanthan gum, guar gum, sodium alginate).</dd>
+                        <dd class="info__list-def">CONTAINS: EGG</dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <!--end info-->
+                <!--begin summary-->
+                <section class="summary content__block"><button class="summary__head expand-block js-expand-block is-open">
+                    <div class="summary__head-icon"><svg class="icon icon-arrow summary__head-arrow expand-block__icon">
+                        <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                      </svg></div>
+                    <h3 class="summary__head-title title title_md">Nutrition facts</h3>
+                  </button>
+                  <div class="summary__content expand-block__content">
+                    <div class="summary__content-inner">
+                      <div class="summary__stat">
+                        <div class="summary__stat-row">
+                          <div class="summary__stat-term">Total grams</div>
+                          <div class="summary__stat-def">365 g</div>
+                        </div>
+                        <div class="summary__stat-row">
+                          <div class="summary__stat-term">Calories</div>
+                          <div class="summary__stat-def">475</div>
+                        </div>
+                        <table class="summary__table">
+                          <tbody class="summary__table-body">
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data"></td>
+                              <td class="summary__table-data">
+                                <div class="summary__table-data-symbol">?</div>APS*
+                              </td>
+                              <td class="summary__table-data">
+                                <div class="summary__table-data-symbol">?</div>%DV**
+                              </td>
+                            </tr>
+                          </tbody>
+                          <tbody class="summary__table-body">
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Total Fat</td>
+                              <td class="summary__table-data">33g</td>
+                              <td class="summary__table-data">51%</td>
+                            </tr>
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Satured Fat</td>
+                              <td class="summary__table-data">3.5g</td>
+                              <td class="summary__table-data">18%</td>
+                            </tr>
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Trans Fat</td>
+                              <td class="summary__table-data">0g</td>
+                              <td class="summary__table-data">0%</td>
+                            </tr>
+                          </tbody>
+                          <tbody class="summary__table-body">
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Cholesterol</td>
+                              <td class="summary__table-data">33g</td>
+                              <td class="summary__table-data">51%</td>
+                            </tr>
+                          </tbody>
+                          <tbody class="summary__table-body">
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Sodium</td>
+                              <td class="summary__table-data">1485g</td>
+                              <td class="summary__table-data">51%</td>
+                            </tr>
+                          </tbody>
+                          <tbody class="summary__table-body">
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Total Carbs</td>
+                              <td class="summary__table-data">1485g</td>
+                              <td class="summary__table-data">51%</td>
+                            </tr>
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Dietary Fiber</td>
+                              <td class="summary__table-data">3.5g</td>
+                              <td class="summary__table-data">18%</td>
+                            </tr>
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Sugar</td>
+                              <td class="summary__table-data">0g</td>
+                              <td class="summary__table-data">0%</td>
+                            </tr>
+                          </tbody>
+                          <tbody class="summary__table-body">
+                            <tr class="summary__table-row">
+                              <td class="summary__table-data">Protein</td>
+                              <td class="summary__table-data">1485g</td>
+                              <td class="summary__table-data">51%</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="summary__info">
+                        <div class="summary__info-item">
+                          <div class="summary__info-term">Vitamin A</div>
+                          <div class="summary__info-def">51%</div>
+                        </div>
+                        <div class="summary__info-item">
+                          <div class="summary__info-term">Vitamin A</div>
+                          <div class="summary__info-def">51%</div>
+                        </div>
+                        <div class="summary__info-item">
+                          <div class="summary__info-term">Iron</div>
+                          <div class="summary__info-def">51%</div>
+                        </div>
+                        <div class="summary__info-item">
+                          <div class="summary__info-term">Calcium</div>
+                          <div class="summary__info-def">51%</div>
+                        </div>
+                      </div>
+                      <div class="summary__hint">
+                        <p class="summary__hint-text">* Amount Per Serving</p>
+                        <p class="summary__hint-text">** Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs</p>
+                      </div>
+                      <div class="summary__warn">
+                        <div class="summary__warn-head">
+                          <div class="summary__warn-icon icon-warning"></div>
+                          <h5 class="summary__warn-title title">Allergens</h5>
+                        </div>
+                        <ul class="summary__warn-list">
+                          <li>Eggs</li>
+                          <li>Wheat</li>
+                          <li>Soy</li>
+                          <li>Milk</li>
+                          <li>Tree Nuts</li>
+                          <li>Crustacean</li>
+                          <li>Fish</li>
+                        </ul>
+                      </div>
+                      <div class="summary__bottom"><a class="link link_orange summary__bottom-link" href="#!"><span class="link__icon icon-warn-shield"></span><span class="link__text">Disclaimer</span></a></div>
+                    </div>
+                  </div>
+                </section>
+                <!--end summary-->
+              </aside>
+            </div>
+          </div>
+        </section>
+        <!--end content-->
+      </main>
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

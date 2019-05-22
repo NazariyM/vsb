@@ -1,0 +1,113 @@
+.summary
+   color: rgba(#373737, .7)
+   border-color: $light-green-2
+   &__head
+      &-arrow
+         stroke: $light-green
+      
+      &-title
+   
+   &__content
+      &-inner
+         padding: 30px
+   &__stat
+      &-row
+         display: flex
+         justify-content: space-between
+         +f('hel700', 20)
+         line-height: 1
+         
+         &:not(:last-child)
+            margin-bottom: 20px
+      
+      &-term
+         padding-right: 15px
+      
+      &-def
+         flex: 0 0 100px
+         text-align: center
+   
+   &__table
+      +f('hel700', 18)
+      &-row:first-child &-data:nth-child(2),
+      &-row:first-child &-data:nth-child(3)
+         width: 60px
+         text-align: center
+         
+      &-row:first-child ~ &-row
+         color: rgba(#373737, .44)
+         text-align: center
+         
+      &-row:first-child ~ &-row &-data:first-child
+         padding: 10px 5px 10px 50px
+         text-align: left
+         +f('hel400')
+      
+      &-body
+         &:not(:first-child)
+            border-top: 1px solid #979797
+      
+      &-row
+   
+      &-data
+         padding: 10px 0
+   
+         &-symbol
+            text-align: center
+            +fs(12)
+            color: $orange
+
+   &__info
+      font-size: 0
+      padding: 20px 15px
+      margin: 0 -10px 30px
+      border: 1px solid $light-green-2
+      border-radius: 22px
+      &-item
+         display: inline-flex
+         width: 50%
+         padding: 0 10px
+         +f('hel700', 18)
+         &:nth-child(2) ~ &
+            margin-top: 15px
+            
+      &-term
+         width: 100%
+         padding-right: 15px
+      &-def
+         width: 50px
+
+   &__hint
+      margin-bottom: 30px
+      &-text
+         +fs(14)
+         font-style: italic
+
+   &__warn
+      margin-bottom: 60px
+      padding: 30px
+      background-color: #FDD3D3
+      border-radius: 22px
+      &-head
+         display: flex
+         align-items: center
+         margin-bottom: 20px
+      &-icon
+         margin-right: 12px
+      &-title
+         color: $red
+         +fs(20)
+         
+      &-list
+         padding-left: 20px
+         column-count: 2
+         column-gap: 15px
+         +f('hel700', 18)
+         color: rgba(#373737, .7)
+         li
+            margin-bottom: 20px
+
+   &__bottom
+      text-align: center
+      &-link
+   

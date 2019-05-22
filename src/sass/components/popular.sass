@@ -1,0 +1,91 @@
+.popular
+   padding: 30px 0 60px
+   
+   &__title
+      margin-bottom: 30px
+   
+   &__list
+      position: relative
+      z-index: 1
+      margin: -30px -15px 0 35px
+      padding: 60px 40px 40px
+      overflow: hidden
+      
+      &-controls
+         position: absolute
+         top: 0
+         right: 0
+         z-index: 1
+         font-size: 0
+      
+      &-btn
+         $parent: &
+         display: inline-flex
+         align-items: center
+         justify-content: center
+         width: 50px
+         height: 50px
+         background-color: rgba(#9B9B9B, .1)
+         border-radius: 50%
+         cursor: pointer
+         transition: .3s ease-in-out
+         
+         &:not(.is-disabled):hover
+            box-shadow: inset 0 0 15px rgba($black, .2)
+         
+         &_prev
+            margin-right: 3px
+         &_next
+         
+         &-icon
+            stroke: $light-green
+            fill: none
+            font-size: 22px
+            transition: .5s ease-in-out
+   
+            #{$parent}_prev &
+               transform: scaleX(-1)
+            #{$parent}.is-disabled &
+               stroke: #9B9B9B
+   
+   &__item
+      $parent: &
+      display: block
+      border-radius: 28px
+      overflow: hidden
+      flex-basis: percentage(490 / 1440)
+      //width: percentage(490 / 1440)
+      flex-grow: 0
+      flex-shrink: 0
+      box-shadow: 13px 7px 30px rgba(#7E7C97, .87)
+      
+      &-img-wrap
+         display: block
+         +cover-img
+         +ratio(490, 262)
+         &::after
+            opacity: 0
+            +coverdiv
+            background-color: rgba(#4A4A4A, .47)
+            transition: .3s ease-in-out
+            content: ''
+            #{$parent}:hover &
+               opacity: 1
+            
+         img
+            +coverdiv
+            width: 100%
+      
+      &-title
+         opacity: 0
+         position: absolute
+         left: 30px
+         right: 30px
+         bottom: 15px
+         +fs(25)
+         color: $white
+         transition: .3s ease-in-out
+         transform: translateY(30px)
+         #{$parent}:hover &
+            transform: translateY(0)
+            opacity: 1

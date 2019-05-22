@@ -1,0 +1,142 @@
+$icons: (0:0)
+$icons: map-merge($icons,('cabbage': (X: -70px, Y:-242px, W: 45px, H: 58px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('chain': (X: -196px, Y:-140px, W: 76px, H: 76px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('cherry': (X: -102px, Y:-140px, W: 84px, H: 84px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('chicken': (X: -282px, Y:-140px, W: 76px, H: 76px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('cucumber': (X: 0px, Y:-242px, W: 60px, H: 60px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('cups': (X: -289px, Y:-242px, W: 33px, H: 32px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('download': (X: 0px, Y:-312px, W: 46px, H: 52px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('follow': (X: -243px, Y:-242px, W: 36px, H: 36px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('leaf': (X: -368px, Y:-140px, W: 76px, H: 76px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('main-logo': (X: 0px, Y:0px, W: 622px, H: 130px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('potato': (X: 0px, Y:-140px, W: 92px, H: 92px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('salad-1': (X: -454px, Y:-140px, W: 80px, H: 46px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('salad-2': (X: -125px, Y:-242px, W: 50px, H: 50px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('warn-shield': (X: -185px, Y:-242px, W: 48px, H: 48px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+$icons: map-merge($icons,('warning': (X: -544px, Y:-140px, W: 40px, H: 40px, TW: 622px, TH: 364px, IMG: '../img/sprite.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+  $icon: map-get($icons, $icon)
+  @return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  width: icon-attr($iconName, W)
+  height: icon-attr($iconName, H)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+  background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+  background-image: url(icon-attr($iconName, IMG))
+  $width: icon-attr($iconName, W)
+  $height: icon-attr($iconName, H)
+  width: $width/2
+  height: $height/2
+  $x: icon-attr($iconName, X)
+  $y: icon-attr($iconName, Y)
+  background-position: $x/2 $y/2
+  $tw: icon-attr($iconName, TW)   
+  $th: icon-attr($iconName, TH)
+  background-size: $tw/2 $th/2    
+
+
+@mixin s($i)
+  +sprite($i)
+@mixin sp($i)
+  +sprite-position($i)
+@mixin sr($i)
+  +sprite-retina($i)  
+
+//
+//.icon-cabbage
+//  width: 45px
+//  height: 58px
+//  background-image: url('../img/sprite.png')
+//  background-position: -70px -242px
+//
+//.icon-chain
+//  width: 76px
+//  height: 76px
+//  background-image: url('../img/sprite.png')
+//  background-position: -196px -140px
+//
+//.icon-cherry
+//  width: 84px
+//  height: 84px
+//  background-image: url('../img/sprite.png')
+//  background-position: -102px -140px
+//
+//.icon-chicken
+//  width: 76px
+//  height: 76px
+//  background-image: url('../img/sprite.png')
+//  background-position: -282px -140px
+//
+//.icon-cucumber
+//  width: 60px
+//  height: 60px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -242px
+//
+//.icon-cups
+//  width: 33px
+//  height: 32px
+//  background-image: url('../img/sprite.png')
+//  background-position: -289px -242px
+//
+//.icon-download
+//  width: 46px
+//  height: 52px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -312px
+//
+//.icon-follow
+//  width: 36px
+//  height: 36px
+//  background-image: url('../img/sprite.png')
+//  background-position: -243px -242px
+//
+//.icon-leaf
+//  width: 76px
+//  height: 76px
+//  background-image: url('../img/sprite.png')
+//  background-position: -368px -140px
+//
+//.icon-main-logo
+//  width: 622px
+//  height: 130px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px 0px
+//
+//.icon-potato
+//  width: 92px
+//  height: 92px
+//  background-image: url('../img/sprite.png')
+//  background-position: 0px -140px
+//
+//.icon-salad-1
+//  width: 80px
+//  height: 46px
+//  background-image: url('../img/sprite.png')
+//  background-position: -454px -140px
+//
+//.icon-salad-2
+//  width: 50px
+//  height: 50px
+//  background-image: url('../img/sprite.png')
+//  background-position: -125px -242px
+//
+//.icon-warn-shield
+//  width: 48px
+//  height: 48px
+//  background-image: url('../img/sprite.png')
+//  background-position: -185px -242px
+//
+//.icon-warning
+//  width: 40px
+//  height: 40px
+//  background-image: url('../img/sprite.png')
+//  background-position: -544px -140px
+//

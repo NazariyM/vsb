@@ -1,0 +1,284 @@
+---
+title: Virtual Salad Bar
+---
+extends layouts/_layout
+
+block content
+
+	main.main
+
+		//begin popular
+		+b.SECTION.popular
+			+e.container.container
+				+e.H2.title.title._lg Choose from our most popular recipes
+
+				+e.list.js-popular-slider
+					.swiper-wrapper
+						-i = 0
+						while i < 2
+							+e.A.item.swiper-slide(href='#!')
+								+e.item-img-wrap
+									+e.IMG(src=`img/content/pop-food_1.jpg` alt='image')
+								+e.H6.item-title.title Buffalo Style White Meat Chicken Salad
+							+e.A.item.swiper-slide(href='#!')
+								+e.item-img-wrap
+									+e.IMG(src=`img/content/pop-food_2.jpg` alt='image')
+								+e.H6.item-title.title Apple cranberry walnut salad
+							+e.A.item.swiper-slide(href='#!')
+								+e.item-img-wrap
+									+e.IMG(src=`img/content/pop-food_3.jpg` alt='image')
+								+e.H6.item-title.title Romaine Lettuce Extra Double
+							-i++
+
+					+e.list-controls
+						+e.list-btn._prev: +icon('arrow', '__list-btn-icon')
+						+e.list-btn._next: +icon('arrow', '__list-btn-icon')
+		//end popular
+
+		//begin content
+		+b.SECTION.content
+			+e.container.container
+				+e.H2.title.title._lg or create your own custom salad
+				+e.inner
+					+e.categories
+						-
+							categoriesList = [
+							['Greens', 'salad-1'],
+							['Vegetable', 'cabbage'],
+							['Pickles & Olives', ['cucumber', 'cherry']],
+							['Protein Salads', 'chicken'],
+							['Potato Salads', 'potato'],
+							['Vegetable Salads', 'leaf'],
+							['Marinated Salads', 'leaf'],
+							['Pasta Salads', 'chicken'],
+							['Rice, Grain & Bean Salads', 'potato'],
+							['Other Prepared Salads', 'leaf'],
+							['Proteins & cheeses', 'leaf'],
+							['Fruit', 'chicken'],
+							['Desserts', 'potato'],
+							['Salad Dressings', 'leaf'],
+							['Dry Toppings', 'leaf']]
+
+						for contentItem, idx in categoriesList
+							+b.category._default
+								+e.BUTTON.head.expand-block.js-expand-block
+									+icon('arrow', 'category__head-arrow expand-block__icon')
+									+e.H4.title.title._md= contentItem[0]
+									+e.head-icon-wrap
+										if idx === 2
+											+e.head-icon(class= `icon-${contentItem[1][0]}`)
+											+e.head-icon(class= `icon-${contentItem[1][1]}`)
+										else
+											+e.head-icon(class= `icon-${contentItem[1]}`)
+
+								+e.content.expand-block__content
+									+e.content-inner
+										-
+											compsList = [
+											'Fancy Salad',
+											'Kale',
+											'Baby Spinach',
+											'Spring Mix',
+											'Iceberg Lettuce',
+											'Romaine Lettuce']
+
+										for text, i in compsList
+											+e.LABEL.comp
+												+e.INPUT.comp-control(type='checkbox' name='ingredient')
+												+e.comp-img-wrap
+													+e.IMG(src=`img/content/ingredient_${i + 1}.jpg` alt='image')
+												+e.H6.comp-title.title= text
+												+e.comp-portion
+													+e.comp-portion-icon.icon-cups
+													span 2
+													| cups
+												+e.comp-visual
+
+					+e.ASIDE.side
+						//begin ingreds
+						+b.ingreds.__block
+							+b.form-group.js-form-group.__name-field
+								+e.icon.icon-salad-2
+								+e.INPUT.control(type='text' name='saladName' autocomplete='off' required)
+								+e.LABEL.label: span My salad name
+								+e.SPAN.error Please fill up this field
+
+							+e.H3.title.title._md Ingredients
+
+							-
+								ingredientsList = [
+								'Romaine Lettuce Extra Double',
+								'Buffalo Style White Meat Chicken Salad with second and third line description',
+								'Olive Oil',
+								'Romaine Lettuce Extra']
+
+							for text in ingredientsList
+								+e.item
+									+e.item-text
+										+e.SPAN.item-name.title= text
+										+e.SPAN.item-portion 2 cups
+
+									+e.count.js-click-count
+										+e.BUTTON.count-btn._minus.js-click-count-minus
+											span –
+										+e.INPUT.count-control.js-click-count-display(type='text' value='1' name='ingredCount' readonly)
+										+e.BUTTON.count-btn._plus.js-click-count-plus
+											span +
+
+							+e.status
+								+e.H5.status-title.title Approximate net weight
+								+e.SPAN.status-count 0.7 lbs
+
+							+e.actions
+								+b.BUTTON.btn._blue.__actions-btn(type='button')
+									+e.icon.icon-download
+									+e.SPAN.actions-btn-text Print (PDF)
+								+b.BUTTON.btn._green.__actions-btn(type='button')
+									+e.icon.icon-chain
+									+e.SPAN.actions-btn-text Copy link
+						//end ingreds
+
+						//begin info
+						+b.info.__block
+							+e.BUTTON.head.expand-block.js-expand-block.is-open
+								+e.head-icon
+									+icon('arrow', 'info__head-arrow expand-block__icon')
+								+e.H3.head-title.title._md Full ingredients list
+							+e.content.expand-block__content
+								+e.content-inner
+									-
+										infoList = [
+										['Romaine Lettuce Extra Double'],
+										['Buffalo Style White Meat Chicken Salad with second and third line description', ['(expeller pressed canola oil, cage free egg yolks, water,', 'honey, distilled vinegar, cage free whole egg, contains less than 2% of salt, spice, lemon juice concentrate),', 'Sugar, Water,', 'Roasted Red Peppers (citric acid)']],
+										['Olive Oil', ['Lemon Juice (from concentrate),', 'Salt,', 'Ascorbic Acid,', 'Gum (xanthan gum, guar gum, sodium alginate).', 'CONTAINS: EGG']]]
+
+									for infoText in infoList
+										+e.DL.list
+											+e.DT.list-term= infoText[0]
+											if infoText[1]
+												each text in infoText[1]
+													+e.DD.list-def= text
+						//end info
+
+						//begin summary
+						+b.SECTION.summary.__block
+							+e.BUTTON.head.expand-block.js-expand-block.is-open
+								+e.head-icon
+									+icon('arrow', 'summary__head-arrow expand-block__icon')
+								+e.H3.head-title.title._md Nutrition facts
+							+e.content.expand-block__content
+								+e.content-inner
+									+e.stat
+										+e.stat-row
+											+e.stat-term Total grams
+											+e.stat-def 365 g
+
+										+e.stat-row
+											+e.stat-term Calories
+											+e.stat-def 475
+
+										+e.TABLE.table
+
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data
+													+e.TD.table-data
+														+e.table-data-symbol ?
+														| APS*
+													+e.TD.table-data
+														+e.table-data-symbol ?
+														| %DV**
+
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Total Fat
+													+e.TD.table-data 33g
+													+e.TD.table-data 51%
+												+e.TR.table-row
+													+e.TD.table-data Satured Fat
+													+e.TD.table-data 3.5g
+													+e.TD.table-data 18%
+												+e.TR.table-row
+													+e.TD.table-data Trans Fat
+													+e.TD.table-data 0g
+													+e.TD.table-data 0%
+
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Cholesterol
+													+e.TD.table-data 33g
+													+e.TD.table-data 51%
+
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Sodium
+													+e.TD.table-data 1485g
+													+e.TD.table-data 51%
+
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Total Carbs
+													+e.TD.table-data 1485g
+													+e.TD.table-data 51%
+												+e.TR.table-row
+													+e.TD.table-data Dietary Fiber
+													+e.TD.table-data 3.5g
+													+e.TD.table-data 18%
+												+e.TR.table-row
+													+e.TD.table-data Sugar
+													+e.TD.table-data 0g
+													+e.TD.table-data 0%
+
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Protein
+													+e.TD.table-data 1485g
+													+e.TD.table-data 51%
+
+									+e.info
+										-
+											summaryInfoList = [
+											'Vitamin A',
+											'Vitamin A',
+											'Iron',
+											'Calcium']
+
+										for text in summaryInfoList
+											+e.info-item
+												+e.info-term= text
+												+e.info-def 51%
+
+									+e.hint
+										-
+											summaryHintList = [
+											'* Amount Per Serving',
+											'** Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs']
+
+										for text in summaryHintList
+											+e.P.hint-text= text
+
+									+e.warn
+										+e.warn-head
+											+e.warn-icon.icon-warning
+
+											+e.H5.warn-title.title Allergens
+										+e.UL.warn-list
+											-
+												warnList = [
+												'Eggs',
+												'Wheat',
+												'Soy',
+												'Milk',
+												'Tree Nuts',
+												'Crustacean',
+												'Fish']
+											for text in warnList
+												li= text
+
+									+e.bottom
+										+b.A.link._orange.__bottom-link(href='#!')
+											+e.icon.icon-warn-shield
+											+e.SPAN.text Disclaimer
+						//end summary
+
+		//end content

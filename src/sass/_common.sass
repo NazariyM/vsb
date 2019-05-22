@@ -1,0 +1,68 @@
+html
+   font-size: 62.5%
+
+body
+   min-width: 320px
+   +smooth-font
+   +f('hel400', 16, 1.2)
+   color: $gray-2
+
+.container
+   max-width: 1440px
+   margin: 0 auto
+   padding: 0 24px 0 50px
+
+.main
+   padding-bottom: 80px
+   background-color: $light-gray
+
+.title
+   +f('hel700')
+   
+   &_md
+      +fs(30)
+      color: #5c5c5d
+   
+   &_lg
+      +fs(60)
+      color: #373737
+
+.btn
+   display: inline-flex
+   align-items: center
+   padding: 10px 15px
+   color: $white
+   min-height: 78px
+   border-radius: 50px
+   +f('hel700', 22)
+   transition: .3s ease-in-out
+   
+   &_blue
+      background-color: $blue
+      
+      &:hover
+         background-color: darken($blue, 8)
+   
+   &_green
+      background-color: $light-green
+      
+      &:hover
+         background-color: darken($light-green, 8)
+   
+   .icon-chain
+      transform: rotate(45deg)
+
+.link
+   $parent: &
+   display: inline-flex
+   align-items: center
+   +f('hel700', 18)
+   &_orange
+      color: $orange
+   &__icon
+      margin-right: 4px
+   &__text
+      border-bottom: em(1) solid currentColor
+      transition: .3s ease-in-out
+      #{$parent}:hover &
+         border-bottom-color: transparent
