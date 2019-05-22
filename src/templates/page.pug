@@ -40,7 +40,7 @@ block content
 			+e.container.container
 				+e.H2.title.title._lg or create your own custom salad
 				+e.inner
-					+e.categories
+					+e.col._categories
 						-
 							categoriesList = [
 							['Greens', 'salad-1'],
@@ -93,7 +93,7 @@ block content
 													| cups
 												+e.comp-visual
 
-					+e.ASIDE.side
+					+e.ASIDE.col._side
 						//begin ingreds
 						+b.ingreds.__block
 							+b.form-group.js-form-group.__name-field
@@ -176,64 +176,64 @@ block content
 											+e.stat-term Calories
 											+e.stat-def 475
 
-										+e.table-wrap
-											+e.TABLE.table
+									+e.table-wrap
+										+e.TABLE.table
 
-												+e.TBODY.table-body
-													+e.TR.table-row
-														+e.TD.table-data
-														+e.TD.table-data
-															+e.table-data-symbol ?
-															| APS*
-														+e.TD.table-data
-															+e.table-data-symbol ?
-															| %DV**
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data
+													+e.TD.table-data
+														+e.table-data-symbol ?
+														| APS*
+													+e.TD.table-data
+														+e.table-data-symbol ?
+														| %DV**
 
-												+e.TBODY.table-body
-													+e.TR.table-row
-														+e.TD.table-data Total Fat
-														+e.TD.table-data 33g
-														+e.TD.table-data 51%
-													+e.TR.table-row
-														+e.TD.table-data Satured Fat
-														+e.TD.table-data 3.5g
-														+e.TD.table-data 18%
-													+e.TR.table-row
-														+e.TD.table-data Trans Fat
-														+e.TD.table-data 0g
-														+e.TD.table-data 0%
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Total Fat
+													+e.TD.table-data 33g
+													+e.TD.table-data 51%
+												+e.TR.table-row
+													+e.TD.table-data Satured Fat
+													+e.TD.table-data 3.5g
+													+e.TD.table-data 18%
+												+e.TR.table-row
+													+e.TD.table-data Trans Fat
+													+e.TD.table-data 0g
+													+e.TD.table-data 0%
 
-												+e.TBODY.table-body
-													+e.TR.table-row
-														+e.TD.table-data Cholesterol
-														+e.TD.table-data 33g
-														+e.TD.table-data 51%
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Cholesterol
+													+e.TD.table-data 33g
+													+e.TD.table-data 51%
 
-												+e.TBODY.table-body
-													+e.TR.table-row
-														+e.TD.table-data Sodium
-														+e.TD.table-data 1485g
-														+e.TD.table-data 51%
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Sodium
+													+e.TD.table-data 1485g
+													+e.TD.table-data 51%
 
-												+e.TBODY.table-body
-													+e.TR.table-row
-														+e.TD.table-data Total Carbs
-														+e.TD.table-data 1485g
-														+e.TD.table-data 51%
-													+e.TR.table-row
-														+e.TD.table-data Dietary Fiber
-														+e.TD.table-data 3.5g
-														+e.TD.table-data 18%
-													+e.TR.table-row
-														+e.TD.table-data Sugar
-														+e.TD.table-data 0g
-														+e.TD.table-data 0%
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Total Carbs
+													+e.TD.table-data 1485g
+													+e.TD.table-data 51%
+												+e.TR.table-row
+													+e.TD.table-data Dietary Fiber
+													+e.TD.table-data 3.5g
+													+e.TD.table-data 18%
+												+e.TR.table-row
+													+e.TD.table-data Sugar
+													+e.TD.table-data 0g
+													+e.TD.table-data 0%
 
-												+e.TBODY.table-body
-													+e.TR.table-row
-														+e.TD.table-data Protein
-														+e.TD.table-data 1485g
-														+e.TD.table-data 51%
+											+e.TBODY.table-body
+												+e.TR.table-row
+													+e.TD.table-data Protein
+													+e.TD.table-data 1485g
+													+e.TD.table-data 51%
 
 									+e.info
 										-

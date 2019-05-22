@@ -11,13 +11,21 @@
       &-inner
          padding: 0 22px 25px
    &__stat
-      margin-bottom: 22px
+      padding: 20px 15px
+      margin-bottom: 20px
+      border-radius: 22px
+      background-color: rgba(#C9E2D4, .45)
       &-row
          display: flex
          justify-content: space-between
          padding: 0 10px
          +f('hel700', 20)
          line-height: 1
+         
+         &:nth-child(1)
+            color: #4A4A4A
+         &:nth-child(2)
+            color: $light-green
          
          &:not(:first-child)
             margin-top: 30px
@@ -30,7 +38,7 @@
          text-align: center
    
    &__table
-      margin-top: 30px
+      margin-bottom: 22px
       +f('hel700', 18)
       &-wrap
          padding: 0 12px
