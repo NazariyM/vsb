@@ -157,12 +157,12 @@ block content
 											[['Olive Oil'], ['Lemon Juice (from concentrate),', 'Salt,', 'Ascorbic Acid,', 'Gum (xanthan gum, guar gum, sodium alginate).', 'CONTAINS: EGG']]]
 
 										for infoText in infoList
-											+e.DL.list
+											+e.list
 												each text in infoText[0]
-													+e.DT.list-term= text
+													+e.list-term= text
 												if infoText[1]
 													each text in infoText[1]
-														+e.DD.list-def= text
+														+e.list-def= text
 							//end info
 
 							//begin summary
