@@ -65,7 +65,7 @@ block content
 
 							for contentItem, idx in categoriesList
 								+b.category._default
-									+e.BUTTON.head.expand-block.js-expand-block
+									+e.A.head.expand-block.js-expand-block(href='#!')
 										+icon('arrow', 'category__head-arrow expand-block__icon')
 										+e.H4.title.title._md= contentItem[0]
 										if idx === 2
@@ -144,7 +144,7 @@ block content
 
 							//begin info
 							+b.info.__aside-block
-								+e.BUTTON.head.expand-block.js-expand-block.is-open
+								+e.A.head.expand-block.js-expand-block.is-open(href='#!')
 									+icon('arrow', 'info__head-arrow expand-block__icon expand-block__icon_desk')
 									+icon('arrow-bold', 'info__head-arrow expand-block__icon expand-block__icon_mob')
 									+e.H3.head-title.title._md Full ingredients list
@@ -167,7 +167,7 @@ block content
 
 							//begin summary
 							+b.SECTION.summary.__aside-block
-								+e.BUTTON.head.expand-block.js-expand-block.is-open
+								+e.A.head.expand-block.js-expand-block.is-open(href='#!')
 									+icon('arrow', 'summary__head-arrow expand-block__icon expand-block__icon_desk')
 									+icon('arrow-bold', 'summary__head-arrow expand-block__icon expand-block__icon_mob')
 									+e.H3.head-title.title._md Nutrition facts

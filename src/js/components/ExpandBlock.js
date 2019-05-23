@@ -18,7 +18,7 @@ class ExpandBlock {
   }
 
   bindEvents() {
-    this.block.addEventListener('click', () => this.toggleContent())
+    this.block.addEventListener('click', (e) => this.toggleContent(e))
     this.content.addEventListener(
       'transitionend',
       this.setAutoHeight.bind(this)
@@ -33,7 +33,9 @@ class ExpandBlock {
     else this.content.style.height = '0px'
   }
 
-  toggleContent() {
+  toggleContent(e) {
+    e.preventDefault()
+
     if (this.block.classList.contains(css.open)) {
       this.initHeight = this.content.offsetHeight
       this.content.style.height = `${this.initHeight}px`
