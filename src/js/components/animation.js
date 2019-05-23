@@ -18,7 +18,7 @@ ScrollReveal().reveal('.category', {
   origin: 'right',
 })
 
-if (!Resp.isMobile)
+if (!Resp.isSmallMobile)
   ScrollReveal().reveal('.content__aside-block', {
     delay: 250,
     distance: '60px',

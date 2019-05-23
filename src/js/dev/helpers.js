@@ -71,4 +71,8 @@ export class Resp {
   static get isMobile() {
     return window.matchMedia('(max-width: 767px)').matches;
   }
+
+  static get isSmallMobile() {
+    return window.matchMedia('(max-width: 374px)').matches;
+  }
 }
