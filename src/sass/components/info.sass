@@ -1,6 +1,10 @@
 .info
    border-color: $orange
    background-color: rgba(#BDE6AB, .03)
+   +md
+      margin-top: -10px
+      border-width: 2px
+    
    &__title
    &__head
       &-arrow
@@ -8,8 +12,16 @@
    &__list
       +fs(14)
       line-height: 1.3em
+      +lg
+         +fs(13)
+      +md
+         +fs(10)
+   
       &:not(:last-child)
          margin-bottom: 20px
+         +lg
+            margin-bottom: 15px
+    
       &-term
          +f('av700')
          color: #4A4A4A
@@ -18,3 +30,7 @@
    &__content
       &-inner
          padding: 6px 38px 56px
+         +lg
+            padding: 10px 26px 36px
+         +md
+            padding: 10px 26px 21px

@@ -10,18 +10,33 @@
    &__content
       &-inner
          padding: 0 22px 25px
+         +lg
+            padding: 20px 26px 22px
+         +md
+            padding: 10px 20px 15px
+   
    &__stat
       padding: 20px 15px
       margin-bottom: 20px
       border-radius: 22px
       background-color: rgba(#C9E2D4, .45)
+      +lg
+         padding: 12px 8px
+      +md
+         margin-bottom: 4px
+         border-radius: 10px
+   
       &-row
          display: flex
          justify-content: space-between
          padding: 0 10px
          +f('hel700', 20)
          line-height: 1
-         
+         +lg
+            +fs(18)
+         +md
+            +fs(14)
+   
          &:nth-child(1)
             color: #4A4A4A
          &:nth-child(2)
@@ -29,24 +44,46 @@
          
          &:not(:first-child)
             margin-top: 30px
-      
+            +lg
+               margin-top: 20px
+               
+            +md
+               margin-top: 10px
+   
       &-term
          padding-right: 15px
       
       &-def
          flex: 0 0 100px
          text-align: center
+         +lg
+            flex: 0 0 80px
+         +md
+            margin-right: -20px
    
    &__table
       margin-bottom: 22px
       +f('hel700', 18)
+      +lg
+         +fs(15)
+      +md
+         margin-bottom: 8px
+         +fs(12)
+   
       &-wrap
          padding: 0 12px
+         +lg
+            padding: 0
+    
       &-row:first-child &-data:nth-child(2),
       &-row:first-child &-data:nth-child(3)
          width: 85px
          text-align: center
-         
+         +lg
+            width: 65px
+         +md
+            width: 50px
+   
       &-row:first-child ~ &-row
          color: rgba(#373737, .44)
          text-align: center
@@ -55,9 +92,12 @@
          padding: 2px 5px 2px 62px
          text-align: left
          +f('hel400')
-         
+         +lg
+            padding: 2px 5px 2px 42px
       &-row:first-child ~ &-row:last-child &-data
          padding: 2px 5px 14px 62px
+         +lg
+            padding: 2px 5px 14px 42px
    
       &-row:first-child ~ &-row:last-child &-data:nth-child(2),
       &-row:first-child ~ &-row:last-child &-data:nth-child(3)
@@ -74,69 +114,132 @@
    
       &-data
          padding: 10px 5px
-   
+         +lg
+            padding: 6px 5px
+         +md
+            padding: 6px 2px
+    
          &-symbol
             text-align: center
             +fs(12)
             color: $orange
+            +lg
+               display: none
 
    &__info
       margin-bottom: 22px
-      padding: 24px 0
+      padding: 16px 0
       font-size: 0
       border: 1px solid $light-green-2
       border-radius: 22px
-      
+      +md
+         margin-bottom: 7px
+         padding: 10px 0
+         border-radius: 10px
+      +sm
+         padding: 10px 0 10px 4px
+    
       &-item
          display: inline-flex
          width: 50%
          padding: 0 18px
          +f('hel700', 18)
+         +lg
+            padding: 0 15px
+            +fs(15)
+         +md
+            padding: 0 8px
+            +fs(12)
+         +sm
+            width: 43.5%
+   
          &:nth-child(2) ~ &
             margin-top: 15px
-         
+            +lg
+               margin-top: 12px
+            +md
+               margin-top: 6px
+   
       &-term
          width: 100%
          padding-right: 15px
+         +md
+            padding-right: 5px
       &-def
          width: 50px
+         +md
+            width: 40px
 
    &__hint
       margin-bottom: 30px
       padding-left: 10px
+      +lg
+         margin-right: -8px
+         padding-left: 0
+      +md
+         margin-bottom: 25px
       &-text
          +fs(14)
          font-style: italic
+         +lg
+            +fs(12)
+         +md
+            +fs(10)
+   
          &:not(:last-child)
             margin-bottom: 15px
+            +md
+               margin-bottom: 0
          > span
             display: inline-block
             padding-left: 38px
-
+            +md
+               padding-left: 0
    &__warn
       margin-bottom: 60px
       padding: 42px 20px
       background-color: #FDD3D3
       border-radius: 22px
+      +lg
+         margin-bottom: 20px
+         padding: 18px 0
+      +md
+         margin-bottom: 15px
+    
       &-head
          display: flex
          align-items: center
          margin-bottom: 26px
+         +lg
+            justify-content: center
+         +md
+            margin-bottom: 15px
       &-icon
          margin-right: 12px
       &-title
          color: $red
          +fs(20)
-         
+         +lg
+            +fs(15)
+         +md
+            +fs(12)
+   
       &-list
          column-count: 2
          column-gap: 0
          +f('hel700', 18)
          color: rgba(#373737, .7)
+         text-align: left
+         +lg
+            +fs(15)
+         +md
+            +fs(12)
          li
             padding-left: 32px
             margin-bottom: 20px
-
+            +md
+               padding-left: 20px
+               margin-bottom: 10px
    &__bottom
       text-align: center
       &-link

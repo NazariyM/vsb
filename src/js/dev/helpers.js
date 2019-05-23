@@ -11,7 +11,8 @@ export const css = {
   open: 'is-open',
   hidden: 'is-hidden',
   fill: 'is-filled',
-  error: 'is-error'
+  error: 'is-error',
+  fixed: 'is-fixed'
 }
 
 /**
@@ -40,5 +41,34 @@ export function throttle(fn, threshold = 250, scope) {
       last = now
       fn.apply(context, args)
     }
+  }
+}
+
+export const iOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent);
+
+/**
+ * Match media device indicator.
+ *
+ * @type {Boolean}
+ */
+export class Resp {
+  static get currWidth() {
+    return window.innerWidth;
+  }
+
+  static get isTouch() {
+    return 'ontouchstart' in window;
+  }
+
+  static get isDesk() {
+    return window.matchMedia('(min-width: 1200px)').matches;
+  }
+
+  static get isTablet() {
+    return window.matchMedia('(min-width: 768px) and (max-width: 1199px)').matches;
+  }
+
+  static get isMobile() {
+    return window.matchMedia('(max-width: 767px)').matches;
   }
 }

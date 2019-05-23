@@ -1,30 +1,3 @@
-.content
-   padding: 60px 0 0
-   &__container
-      padding: 0 24px 0 52px
-   &__title
-      margin-bottom: 44px
-   
-   &__inner
-      display: flex
-      margin: 0 -11px
-   
-   &__col
-      padding: 0 11px
-      flex-grow: 0
-      
-      &_categories
-         width: percentage(906 / 1364)
-      &_side
-         width: percentage(479 / 1364)
-      
-   &__block
-      border: 1px solid
-      border-radius: 22px
-      box-shadow: 13px 7px 30px rgba($black, .21)
-      &:not(:last-child)
-         margin-bottom: 30px
-
 .expand-block
    $parent: &
    display: flex
@@ -32,6 +5,9 @@
    width: 100%
    padding: 22px 30px 27px 40px
    background: 0
+   +lg
+      padding: 16px 30px 16px 19px
+    
    &__icon
       margin-top: 4px
       margin-right: 24px
@@ -39,8 +15,23 @@
       fill: none
       stroke: currentColor
       transition: .35s ease-in-out
+      +lg
+         margin-top: 0
+         margin-right: 20px
+         +fs(22)
+      +md
+         +fs(16)
+         margin-right: 12px
+   
       #{$parent}.is-open &
          transform: rotate(90deg)
+      &_desk
+         +md
+            display: none
+      &_mob
+         display: none
+         +md
+            display: block
       
    &__content
       overflow: hidden

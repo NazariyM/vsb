@@ -5,18 +5,26 @@
    &__control
       height: 38px
       width: 100%
+      padding-bottom: 10px
       padding-left: 30px
       +f('hel700', 24)
       line-height: 1
       border-bottom: 1px solid #979797
       background: 0
       color: #000
-   
+      +lg
+         height: 30px
+         padding-bottom: 5px
+      +md
+         padding-bottom: 2px
+         +fs(17)
    &__icon
       position: absolute
       top: 2px
       left: 0
-   
+      +lg
+         transform: scale(.8)
+         left: 4px
    &__label
       position: absolute
       top: 0
@@ -27,6 +35,10 @@
       +f('hel700', 24)
       pointer-events: none
       transition: .3s .05s ease-in-out
+      +md
+         top: 6px
+         left: 34px
+         +fs(17)
    
       #{$parent}.is-filled &,
       #{$parent}__control:focus ~ &

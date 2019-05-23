@@ -1,12 +1,37 @@
 .header
-   padding: 22px 0 11px
+   position: fixed
+   top: 0
+   left: 0
+   z-index: 100
+   width: 100%
+   padding: 20px 0 12px
    background-color: $white
+   transition: .3s ease-in-out
+   +lg
+      padding: 10px 0 5px
+   +md
+      padding: 11px 0
+   +sm
+      box-shadow: 0 3px 25px 3px rgba($black, .36)
    
+   &.is-fixed
+      box-shadow: 0 3px 25px 3px rgba($black, .36)
+   
+   &.is-hidden
+      transform: translateY(-100%)
+      
    &__container
+      visibility: hidden
       display: flex
       align-items: center
       justify-content: space-between
       padding: 0 157px 0 57px
+      +lg
+         padding: 0 75px 0 50px
+      +md
+         padding: 0 20px
+      +sm
+         padding: 0 14px
    
    &__bar-logo
       position: relative
@@ -23,6 +48,27 @@
       background-color: $light-green
       color: $white
       transition: .3s ease-in-out
+      +lg
+         top: 2px
+         width: 154px
+         height: 42px
+         padding: 0 15px
+         +fs(18)
+         font-weight: normal
+      +md
+         top: 4px
+         width: 98px
+         height: 26px
+         padding: 0 10px
+         +fs(12)
+      +sm
+         width: 28px
+         height: 28px
+         +fs(8)
+         border-radius: 5px
+         line-height: 0.9
+         letter-spacing: 0
+   
       &:hover
          background-color: #01805b
       
@@ -33,13 +79,35 @@
          height: 76%
          border: 3px solid $white
          content: ''
+         +lg
+            border-width: 2px
+            width: 90%
+            height: 74%
+         +md
+            border-width: 1px
+         +sm
+            display: none
          
       &-text
          padding-top: 5px
-   
+         +md
+            padding-top: 2px
+            
    &__main-logo
       margin: 55px 0 40px 176px
       +hide-text
+      +lg
+         transform: scale(.67)
+         margin: -10px 0 0 24px
+      +md
+         position: absolute
+         top: -2px
+         left: 47.4%
+         z-index: 1
+         transform: translateX(-50%) scale(.42)
+      +sm
+         left: 40.4%
+         transform: translateX(-50%) scale(.38)
    
    &__link
       $parent: &
@@ -50,7 +118,15 @@
       border-bottom: em(2, 30) solid currentColor
       line-height: 1
       transition: .3s ease-in-out
-      
+      +lg
+         margin-top: -8px
+         +fs(20)
+      +md
+         margin-top: 0
+         +fs(15)
+      +sm
+         display: none
+   
       &:hover
          border-bottom-color: transparent
       
@@ -60,3 +136,7 @@
          right: -0.25em
          font-size: 18px
          transition: .3s ease-in-out
+         +md
+            top: -0.6em
+            right: -0.55em
+            transform: scale(.6)

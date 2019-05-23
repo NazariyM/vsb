@@ -1,7 +1,6 @@
-import 'babel-polyfill'
-
+import './components/animation'
+import './components/Header'
 import './components/ExpandBlock'
-import './components/PopFood'
+import './components/sliders'
 import './components/FormGroup'
 import './components/ClickCount'
-
