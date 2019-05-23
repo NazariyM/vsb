@@ -73,6 +73,6 @@ export class Resp {
   }
 
   static get isSmallMobile() {
-    return window.matchMedia('(max-width: 374px)').matches;
+    return window.matchMedia('(max-width: 330px)').matches;
   }
 }
