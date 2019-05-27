@@ -1,27 +1,32 @@
 import { css } from '../dev/helpers'
 
-class FormGroup {
-  constructor(el) {
-    this.block = el
+export class FormGroup {
+  constructor() {
+    this.group = document.querySelectorAll('.js-form-group')
 
-    if (!this.block) return
+    if (!this.group) return
 
-    this.input = this.block.querySelectorAll('input')
+    this.input = null
 
     this.init()
   }
 
   init() {
+    this.getInputs()
     this.bindEvents()
+  }
+
+  getInputs() {
+    this.group.forEach(block => {
+      this.input = block.querySelector('input')
+    })
   }
 
   bindEvents() {
     const events = ['input', 'keypress', 'blur']
 
     events.forEach(evt =>
-      this.input.forEach(input =>
-        input.addEventListener(evt, e => this.checkInput(e))
-      )
+      this.input.addEventListener(evt, e => this.checkInput(e))
     )
   }
 
@@ -37,6 +42,4 @@ class FormGroup {
   }
 }
 
-const formGroups = document.querySelectorAll('.js-form-group')
-
-formGroups.forEach(group => new FormGroup(group))
+new FormGroup()

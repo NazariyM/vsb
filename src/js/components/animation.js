@@ -12,12 +12,19 @@ ScrollReveal().reveal('.popular__list', {
   distance: '-50px',
   origin: 'right',
 })
-ScrollReveal().reveal('.category', {
+ScrollReveal().reveal('.category_default', {
   delay: 250,
   distance: '-50px',
   origin: 'right',
 })
 
+if (Resp.isMobile) {
+  ScrollReveal().reveal('.content__nav', {
+    delay: 700,
+    distance: '-50px',
+    origin: 'right',
+  })
+}
 if (!Resp.isSmallMobile)
   ScrollReveal().reveal('.content__aside-block', {
     delay: 250,

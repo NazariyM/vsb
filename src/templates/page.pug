@@ -65,7 +65,7 @@ block content
 
 							for contentItem, idx in categoriesList
 								+b.category._default
-									+e.A.head.expand-block.js-expand-block(href='#!')
+									+e.A.head.expand-block.js-expand-block(class= idx === 0 ? 'is-open' : '' href='#!')
 										+icon('arrow', 'category__head-arrow expand-block__icon')
 										+e.H4.title.title._md= contentItem[0]
 										if idx === 2
@@ -86,16 +86,23 @@ block content
 												'Romaine Lettuce']
 
 											for text, i in compsList
-												+e.LABEL.comp
+												+e.LABEL.comp(data-comp-id= i)
 													+e.INPUT.comp-control(type='checkbox' name='ingredient')
 													+e.comp-img-wrap
 														+e.IMG(src=`img/content/ingredient_${i + 1}.jpg` alt='image')
 													+e.comp-title.title= text
 													+e.comp-portion
 														+e.comp-portion-icon.icon-cups
+															img(src='img/other/cups.png' alt='portion')
 														span 2
 														| cups
 													+e.comp-visual
+							//begin print-ingreds
+							+b.print-ingreds
+								+b.title._lg.__title Virtual Salad Bar
+								+e.container.js-print-ingreds
+
+							//end print-ingreds
 
 						+e.ASIDE.col._side.swiper-slide
 							//begin ingreds
@@ -134,12 +141,13 @@ block content
 									+e.SPAN.status-count 0.7 lbs
 
 								+e.actions
-									+b.BUTTON.btn._blue.__actions-btn
+									+b.BUTTON.btn._blue.__actions-btn.js-print-btn
 										+e.SPAN.icon.icon-download
-										+e.SPAN.actions-btn-text Print (PDF)
+										| Print (PDF)
+										+e.SPAN.hint add at least one ingredient to print
 									+b.BUTTON.btn._green.__actions-btn
 										+e.SPAN.icon.icon-chain
-										+e.SPAN.actions-btn-text Copy link
+										| Copy link
 							//end ingreds
 
 							//begin info

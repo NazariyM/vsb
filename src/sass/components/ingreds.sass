@@ -1,177 +1,183 @@
 .ingreds
-   padding: 49px 22px 40px 38px
-   background-color: rgba(#E1E3F7, .24)
-   border-width: 2px
-   border-color: $light-green-2
-   color: #626263
-   +lg
-      padding: 36px 8px 40px 25px
-   +md
-      padding: 18px 8px 25px 18px
-   
-   &__title
-      margin-bottom: 26px
-      +lg
-         margin-bottom: 23px
-   
-   &__name-field
-      padding-left: 5px
-      padding-right: 15px
-      margin-left: -5px
-      margin-bottom: 27px
-      +lg
-         margin-bottom: 23px
-      +md
-         margin-bottom: 16px
-    
-   &__list
-      margin-bottom: 52px
-      +lg
-         margin-bottom: 45px
-      +md
-         margin-bottom: 30px
-   
-   &__item
-      display: flex
-      align-items: flex-start
-      
-      &:not(:last-child)
-         margin-bottom: 22px
-         +md
-            margin-bottom: 15px
-   
-      &-text
-         flex: 1 1 auto
-         padding-right: 15px
-         +md
-            padding-right: 10px
-      &-name
-         display: block
-         margin-bottom: 4px
-         +fs(18)
-         +lg
-            +fs(15)
-         +md
-            margin-bottom: -5px
-            +fs(10)
-   
-      &-portion
-         +fs(15)
-         +lg
-            +fs(12)
-         +md
-            +fs(8)
-   
-   
-   &__count
-      display: flex
-      align-items: center
-      flex: 0 0 105px
-      margin-top: -6px
-      color: rgba(#373737, .44)
-      +lg
-         flex: 0 0 94px
-         margin-top: -1px
-      +md
-         flex: 0 0 84px
-      &-display
-         width: 40px
-         background: 0
-         text-align: center
-         +f('hel700', 20)
-         color: inherit
-         +lg
-            width: 30px
-            +fs(15)
-         +md
-            +fs(11)
-   
-      &-btn
-         width: 35px
-         height: 35px
-         +f('hel700', 20)
-         line-height: 1
-         color: inherit
-         border-radius: 50%
-         transition: .3s ease-in-out
-         +lg
-            width: 25px
-            height: 25px
-            +fs(15)
-            line-height: 29px
-         +md
-            width: 30px
-            height: 30px
-            line-height: 33px
-   
-         &:hover
-            box-shadow: inset 0 0 10px currentColor
-         
-         &_minus
-            background-color: rgba(#9B9B9B, .16)
-         
-         &_plus
-            background-color: rgba(#0CC245, .17)
-         
-         span
-            position: relative
-            top: -3px
-   
-   &__status
-      display: flex
-      align-items: center
-      margin: 0 0 37px -20px
-      padding: 16px 15px
-      border: 1px solid $light-green-2
-      border-radius: 22px
-      +f('hel700', 22)
-      text-align: center
-      +lg
-         margin: 0 18px 35px 0
-         padding: 11px 13px
-      +md
-         margin: 0 12px 23px 0
-         padding: 9px 8px
-   
-      &-title
-         flex: 1 1 auto
-         padding-right: 20px
-         font-size: inherit
-         text-align: left
-         +lg
-            +fs(16)
-            padding-right: 10px
-         +md
-            padding-right: 0
-            +fs(12)
-   
-      &-count
-         flex: 0 0 110px
-         +lg
-            flex: 0 0 80px
-            +fs(20)
-         +md
-            flex: 0 0 70px
-            +fs(15)
-            margin-right: -10px
-   &__actions
-      display: flex
-      align-items: center
-      justify-content: center
-      margin: 0 0 0 -22px
-      font-size: 0
-      +lg
-         margin: 0 13px 0 -5px
-      +md
-         margin: 0 6px 0 -5px
-      +sm
-         box-sizing: border-box
-         margin: 0 0 0 -10px
-   
-      &-btn
-         width: calc(50% - 10px)
-         margin: 0 5px
-         +md
-            max-width: 110px
-         +sm
-            max-width: none
+	padding: 49px 22px 40px 38px
+	background-color: rgba(#E1E3F7, .24)
+	border-width: 2px
+	border-color: $light-green-2
+	color: #626263
+	+lg
+		padding: 36px 8px 40px 25px
+	+md
+		padding: 18px 8px 25px 18px
+
+	&__title
+		margin-bottom: 26px
+		+lg
+			margin-bottom: 23px
+
+	&__name-field
+		padding-left: 5px
+		padding-right: 15px
+		margin-left: -5px
+		margin-bottom: 27px
+		+lg
+			margin-bottom: 23px
+		+md
+			margin-bottom: 16px
+
+	&__list
+		margin-bottom: 52px
+		+lg
+			margin-bottom: 45px
+		+md
+			margin-bottom: 30px
+
+	&__item
+		display: flex
+		align-items: flex-start
+
+		&:not(:last-child)
+			margin-bottom: 22px
+			+md
+				margin-bottom: 15px
+
+		&-text
+			flex: 1 1 auto
+			padding-right: 15px
+			+md
+				padding-right: 10px
+
+		&-name
+			display: block
+			margin-bottom: 4px
+			word-break: break-word
+			+fs(18)
+			+lg
+				+fs(15)
+			+md
+				margin-bottom: -5px
+				+fs(10)
+
+		&-portion
+			+fs(15)
+			+lg
+				+fs(12)
+			+md
+				+fs(8)
+
+
+	&__count
+		display: flex
+		align-items: center
+		flex: 0 0 105px
+		margin-top: -6px
+		color: rgba(#373737, .44)
+		+lg
+			flex: 0 0 94px
+			margin-top: -1px
+		+md
+			flex: 0 0 84px
+
+		&-display
+			width: 40px
+			background: 0
+			text-align: center
+			+f('hel700', 20)
+			color: inherit
+			+lg
+				width: 30px
+				+fs(15)
+			+md
+				+fs(11)
+
+		&-btn
+			width: 35px
+			height: 35px
+			+f('hel700', 20)
+			line-height: 1
+			color: inherit
+			border-radius: 50%
+			transition: .3s ease-in-out
+			+lg
+				width: 25px
+				height: 25px
+				+fs(15)
+				line-height: 29px
+			+md
+				width: 30px
+				height: 30px
+				line-height: 33px
+
+			&:hover
+				box-shadow: inset 0 0 10px currentColor
+
+			&_minus
+				background-color: rgba(#9B9B9B, .16)
+
+			&_plus
+				background-color: rgba(#0CC245, .17)
+
+			span
+				position: relative
+				top: -3px
+
+	&__status
+		display: flex
+		align-items: center
+		margin: 0 0 37px -20px
+		padding: 16px 15px
+		border: 1px solid $light-green-2
+		border-radius: 22px
+		+f('hel700', 22)
+		text-align: center
+		+lg
+			margin: 0 18px 35px 0
+			padding: 11px 13px
+		+md
+			margin: 0 12px 23px 0
+			padding: 9px 8px
+
+		&-title
+			flex: 1 1 auto
+			padding-right: 20px
+			font-size: inherit
+			text-align: left
+			+lg
+				+fs(16)
+				padding-right: 10px
+			+md
+				padding-right: 0
+				+fs(12)
+
+		&-count
+			flex: 0 0 110px
+			+lg
+				flex: 0 0 80px
+				+fs(20)
+			+md
+				flex: 0 0 70px
+				+fs(15)
+				margin-right: -10px
+
+	&__actions
+		display: flex
+		align-items: center
+		justify-content: center
+		margin: 0 0 0 -22px
+		font-size: 0
+		+lg
+			margin: 0 13px 0 -5px
+		+md
+			margin: 0 6px 0 -5px
+		+sm
+			box-sizing: border-box
+			margin: 0 0 0 -10px
+
+		&-btn
+			width: calc(50% - 10px)
+			margin: 0 5px
+			+r(1439)
+				max-width: 152px
+			+md
+				max-width: 110px
+			+sm
+				max-width: none

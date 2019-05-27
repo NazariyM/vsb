@@ -1,143 +1,187 @@
 html
-   font-size: 62.5%
+	font-size: 62.5%
 
 body
-   min-width: 320px
-   +smooth-font
-   +f('hel400', 16, 1.2)
-   color: $gray-2
+	min-width: 320px
+	+smooth-font
+	+f('hel400', 16, 1.2)
+	color: $gray-2
 
 .container
-   max-width: 1440px
-   margin: 0 auto
-   padding: 0 24px 0 50px
-   +md
-      padding: 0 20px
-   +sm
-      padding: 0 10px
+	max-width: 1440px
+	margin: 0 auto
+	padding: 0 24px 0 50px
+	+md
+		padding: 0 20px
+	+sm
+		padding: 0 10px
 
 .main
-   overflow: hidden
-   padding: 192px 0 80px
-   background-color: $light-gray
-   +lg
-      padding: 70px 0
-   +md
-      padding: 40px 0
+	overflow: hidden
+	padding: 192px 0 80px
+	background-color: $light-gray
+	+lg
+		padding: 70px 0
+	+md
+		padding: 40px 0
 
 .title
-   +f('hel700')
-   text-align: left
-   &_md
-      +fs(30)
-      color: #5c5c5d
-      +md
-         +fs(17)
-      +sm
-         +fs(17)
-         
-   &_lg
-      visibility: hidden
-      +fs(60)
-      color: #373737
-      +lg
-         +fs(40)
-      +md
-         +fs(30)
-      +sm
-         +fs(17)
+	+f('hel700')
+	text-align: left
+
+	&_md
+		+fs(20)
+		color: #5c5c5d
+		+md
+			+fs(17)
+		+sm
+			+fs(17)
+
+	&_lg
+		visibility: hidden
+		+fs(30)
+		color: #69686a
+		+md
+			+fs(25)
+		+sm
+			+fs(17)
 
 
 .btn
-   position: relative
-   display: inline-flex
-   text-align: right
-   justify-content: flex-end
-   align-items: center
-   color: $white
-   border-radius: 50px
-   +f('hel700', 22)
-   transition: .3s ease-in-out
-   +lg
-      +fs(18)
-   +md
-      +fs(13)
-   &_blue
-      padding: 24px 26px 27px 52px
-      background-color: $blue
-      +lg
-         padding: 19px 16px 21px 32px
-      +md
-         padding: 14px 10px 14px 22px
-      +sm
-         padding: 14px 19px 14px 22px
-   
-      &:hover
-         background-color: darken($blue, 8)
-   
-   &_green
-      padding: 24px 38px 27px 52px
-      background-color: $light-green
-      +lg
-         padding: 19px 18px 21px 32px
-      +md
-         padding: 14px 15px 14px 21px
-      +sm
-         padding: 14px 20px 14px 22px
-   
-      &:hover
-         background-color: darken($light-green, 8)
-   
-   &__icon
-      position: absolute
-      &.icon-download
-         top: calc(50% - 13px)
-         left: 21px
-         +lg
-            left: 13px
-            transform: scale(.7)
-         +md
-            left: 6px
-            transform: scale(.52)
-         +sm
-            left: 14px
-   
-      &.icon-chain
-         left: 14px
-         top: calc(50% - 21px)
-         transform: rotate(45deg)
-         +lg
-            transform: scale(.75) rotate(45deg)
-            left: 10px
-            top: calc(50% - 20px)
-         +md
-            transform: scale(.6) rotate(45deg)
-            left: 0
-         +sm
-            left: 8px
+	position: relative
+	display: inline-flex
+	text-align: right
+	justify-content: flex-end
+	align-items: center
+	color: $white
+	border-radius: 50px
+	+f('hel700', 22)
+	transition: .3s ease-in-out
+	+lg
+		+fs(18)
+	+md
+		+fs(13)
+
+	&.is-error
+		pointer-events: none
+
+	&_blue
+		padding: 24px 26px 27px 52px
+		background-color: $blue
+		+lg
+			padding: 19px 26px 21px 52px
+		+r(1439)
+			padding: 19px 16px 21px 32px
+		+md
+			padding: 14px 10px 14px 22px
+		+sm
+			padding: 14px 19px 14px 22px
+
+		&:hover
+			background-color: darken($blue, 8)
+
+	&_green
+		padding: 24px 38px 27px 52px
+		background-color: $light-green
+		+lg
+			padding: 19px 26px 21px 54px
+		+r(1439)
+			padding: 19px 18px 21px 32px
+		+md
+			padding: 14px 15px 14px 21px
+		+sm
+			padding: 14px 20px 14px 22px
+
+		&:hover
+			background-color: darken($light-green, 8)
+
+	&__icon
+		position: absolute
+
+		&.icon-download
+			top: calc(50% - 13px)
+			left: 21px
+			+lg
+				left: 22px
+				transform: scale(.7)
+			+r(1439)
+				left: 13px
+				transform: scale(.7)
+			+md
+				left: 6px
+				transform: scale(.52)
+			+sm
+				left: 14px
+
+		&.icon-chain
+			left: 14px
+			top: calc(50% - 21px)
+			transform: rotate(45deg)
+			+lg
+				transform: scale(.75) rotate(45deg)
+				left: 20px
+				top: calc(50% - 20px)
+			+r(1439)
+				transform: scale(.75) rotate(45deg)
+				left: 10px
+				top: calc(50% - 20px)
+			+md
+				transform: scale(.6) rotate(45deg)
+				left: 0
+			+sm
+				left: 8px
+
+	&__hint
+		opacity: 0
+		position: absolute
+		top: -100%
+		left: 50%
+		z-index: 1
+		width: 100%
+		transform: translate(-50%, -15px)
+		padding: 15px
+		border-radius: 22px
+		pointer-events: none
+		background-color: $white
+		color: $gray
+		text-align: center
+		+fs(14)
+		box-shadow: 0 0 15px rgba($black, .2)
+		transition: .3s ease-in-out
+		&::after
+			position: absolute
+			top: calc(100% - 1px)
+			left: calc(50% - 15px)
+			+arr(30, 10, $white, b)
+			content: ''
+		.is-error &
+			opacity: 1
+			transform: translate(-50%, 0)
 
 .link
-   $parent: &
-   display: inline-flex
-   align-items: center
-   +f('hel700', 18)
-   +lg
-      +fs(15)
-   +md
-      +fs(12)
-   
-   &_orange
-      color: $orange
-   &__icon
-      margin-right: 4px
-      +lg
-         transform: scale(.8)
-      +md
-         margin-right: -2px
-         transform: scale(.65)
-   
-   &__text
-      border-bottom: em(1) solid currentColor
-      transition: .3s ease-in-out
-      #{$parent}:hover &
-         border-bottom-color: transparent
+	$parent: &
+	display: inline-flex
+	align-items: center
+	+f('hel700', 18)
+	+lg
+		+fs(15)
+	+md
+		+fs(12)
+
+	&_orange
+		color: $orange
+
+	&__icon
+		margin-right: 4px
+		+lg
+			transform: scale(.8)
+		+md
+			margin-right: -2px
+			transform: scale(.65)
+
+	&__text
+		border-bottom: em(1) solid currentColor
+		transition: .3s ease-in-out
+
+		#{$parent}:hover &
+			border-bottom-color: transparent

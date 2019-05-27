@@ -1,275 +1,287 @@
 .category
-   $parent: &
-   position: relative
-   box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
-   border-radius: 22px
-   visibility: hidden
-   +md
-      border-radius: 10px
-   
-   &_default
-      &:not(:first-child)
-         margin-top: 36px
-         +lg
-            margin-top: 28px
-   
-   &__head
-      padding: 22px 100px 27px 48px
-      +lg
-         padding: 17px 93px 19px 37px
-      +md
-         padding: 8px 55px 8px 26px
-      +sm
-         padding: 12px 20px 12px 16px
-   
-      &:hover
-         &::after
-            opacity: 1
-      &::after
-         position: absolute
-         top: -1px
-         left: -1px
-         right: -1px
-         bottom: -1px
-         opacity: 0
-         transition: .35s .15s ease-in-out
-         border: 2px solid $light-green-2
-         border-radius: 22px
-         pointer-events: none
-         content: ''
-         +md
-            border-radius: 10px
-      &.is-open
-         &::after
-            opacity: 1
-      
-      &-arrow
-         margin-top: 0
-         margin-right: 38px
-         stroke: $light-green
-         +lg
-            margin-top: 10px
-            margin-right: 32px
-         +md
-            margin-top: 2px
-            margin-right: 13px
-         +sm
-            margin-right: 8px
-            +fs(10)
-   
-      &-icon
-         position: absolute
-         +lg
-            transform: scale(.85)
-         +md
-            transform: scale(.5)
-         +sm
-            transform: scale(.35)
-            
-         &.icon-salad-1
-            right: 32px
-            +lg
-               right: 25px
-               top: 26px
-            +md
-               top: 8px
-               right: 7px
-            +sm
-               top: 10px
-               right: -4px
-               
-         &.icon-cabbage
-            top: 27px
-            right: 41px
-            +lg
-               top: 21px
-               right: 38px
-            +md
-               top: 6px
-               right: 15px
-            +sm
-               top: 6px
-               right: 9px
-      
-         &.icon-cucumber
-            right: 46px
-            top: 29px
-            +lg
-               top: 15px
-            +md
-               top: 6px
-               right: 18px
-            +sm
-               top: 4px
-               right: 8px
-    
-         &.icon-cherry
-            top: 22px
-            right: 14px
-            +lg
-               top: 22px
-            +md
-               top: 0
-               right: 0
-            +sm
-               top: 4px
-               right: -6px
-         &.icon-chicken
-            top: 21px
-            right: 21px
-            +lg
-               top: 18px
-               right: 29px
-            +md
-               top: 2px
-               right: 6px
-            +sm
-               right: 1px
-         &.icon-potato
-            top: 17px
-            right: 23px
-            +md
-               top: -2px
-               right: 4px
-            +sm
-               right: -4px
-         &.icon-leaf
-            right: 20px
-            top: 20px
-            +lg
-               right: 30px
-               top: 16px
-            +md
-               top: 1px
-               right: 8px
-               transform: scale(.45)
-            +sm
-               right: 0
-   
-   &__title
-      text-align: left
-      color: $light-green
-      +sm
-         +fs(15)
-   
-   
-   &__content
-      &-inner
-         display: flex
-         align-items: flex-start
-         flex-wrap: wrap
-         padding: 5px 6px 56px 20px
-         +lg
-            padding: 5px 6px 25px 20px
-         +md
-            padding: 5px 6px 25px 15px
-         +sm
-            padding: 5px 10px 25px 10px
-   
-   &__comp
-      position: relative
-      display: flex
-      flex-direction: column
-      justify-content: flex-start
-      width: calc(25% - 15px)
-      height: 262px
-      padding: 12px 20px 23px
-      border-radius: 22px
-      background-color: $white
-      cursor: pointer
-      transition: .3s ease-in-out
-      +fs(16)
-      +lg
-         height: 232px
-         padding: 5px 20px 15px
-         +fs(13)
-      +md
-         width: calc(33.33333% - 10px)
-         height: 174px
-         padding: 12px 14px
-      +sm
-         width: calc(50% - 5px)
-         height: 155px
-         border-radius: 10px
-         
-      #{$parent}_default &
-         margin-top: 15px
-         +md
-            margin-top: 10px
-         &:not(:nth-child(4n))
-            margin-right: 15px
-            +md
-               margin-right: 10px
-               
-         &:not(:nth-child(3n))
-            +md
-               margin-right: 10px
-               
-         &:nth-child(2n)
-            +sm
-               margin-right: 0!important
-      
-      &:hover
-         box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
-   
-      &-img-wrap
-         display: block
-         margin-bottom: 8px
-         img
-            display: block
-            width: 100%
-            height: 100%
-            object-fit: contain
-            font-family: 'object-fit: contain;'
-            
-      &-title
-         padding-bottom: 10px
-         color: #717171
-         font-size: inherit
-         +sm
-            padding-bottom: 5px
-            +fs(10)
-   
-      &-portion
-         position: relative
-         display: flex
-         align-items: center
-         margin-top: auto
-         padding-left: 22px
-         color: #9b9b9b
-         +lg
-            +fs(12)
-         +md
-            +fs(8)
-   
-         &-icon
-            position: absolute
-            top: 5px
-            left: 0
-            +md
-               top: -1px
-               transform: scale(.65)
-   
-         span
-            margin-right: 4px
-            
-      &-visual
-         position: absolute
-         top: 0
-         left: 0
-         right: 0
-         bottom: 0
-         z-index: 1
-         border: 3px solid transparent
-         border-radius: 22px
-         transition: .3s ease-in-out
-         pointer-events: none
-         +sm
-            border-radius: 10px
-      
-      &-control
-         display: none
-         
-         &:checked ~ #{$parent}__comp-visual
-            border-color: $light-green
-            box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
+	$parent: &
+	position: relative
+	box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
+	border-radius: 22px
+	visibility: hidden
+	+md
+		border-radius: 10px
+
+	&_default
+		&:not(:first-child)
+			margin-top: 36px
+			+lg
+				margin-top: 28px
+
+	&__head
+		padding: 22px 100px 27px 48px
+		+lg
+			padding: 17px 93px 19px 37px
+		+md
+			padding: 8px 55px 8px 26px
+		+sm
+			padding: 12px 20px 12px 16px
+
+		&:hover
+			&::after
+				opacity: 1
+
+		&::after
+			position: absolute
+			top: -1px
+			left: -1px
+			right: -1px
+			bottom: -1px
+			opacity: 0
+			transition: .35s .15s ease-in-out
+			border: 2px solid $light-green-2
+			border-radius: 22px
+			pointer-events: none
+			content: ''
+			+md
+				border-radius: 10px
+
+		&.is-open
+			&::after
+				opacity: 1
+
+		&-arrow
+			margin-top: 0
+			margin-right: 38px
+			stroke: $light-green
+			+lg
+				margin-top: 10px
+				margin-right: 32px
+			+md
+				margin-top: 2px
+				margin-right: 13px
+			+sm
+				margin-right: 8px
+				+fs(10)
+
+		&-icon
+			position: absolute
+			+lg
+				transform: scale(.85)
+			+md
+				transform: scale(.5)
+			+sm
+				transform: scale(.35)
+
+			&.icon-salad-1
+				right: 32px
+				+lg
+					right: 25px
+					top: 26px
+				+md
+					top: 8px
+					right: 7px
+				+sm
+					top: 10px
+					right: -4px
+
+			&.icon-cabbage
+				top: 27px
+				right: 41px
+				+lg
+					top: 21px
+					right: 38px
+				+md
+					top: 6px
+					right: 15px
+				+sm
+					top: 6px
+					right: 9px
+
+			&.icon-cucumber
+				right: 46px
+				top: 29px
+				+lg
+					top: 15px
+				+md
+					top: 6px
+					right: 18px
+				+sm
+					top: 4px
+					right: 8px
+
+			&.icon-cherry
+				top: 22px
+				right: 14px
+				+lg
+					top: 22px
+				+md
+					top: 0
+					right: 0
+				+sm
+					top: 4px
+					right: -6px
+
+			&.icon-chicken
+				top: 21px
+				right: 21px
+				+lg
+					top: 18px
+					right: 29px
+				+md
+					top: 2px
+					right: 6px
+				+sm
+					right: 1px
+
+			&.icon-potato
+				top: 17px
+				right: 23px
+				+lg
+					top: 12px
+				+md
+					top: -2px
+					right: 4px
+				+sm
+					right: -4px
+
+			&.icon-leaf
+				right: 20px
+				top: 20px
+				+lg
+					right: 30px
+					top: 16px
+				+md
+					top: 1px
+					right: 8px
+					transform: scale(.45)
+				+sm
+					right: 0
+
+	&__title
+		text-align: left
+		color: $light-green
+		+sm
+			+fs(15)
+
+
+	&__content
+		&-inner
+			display: flex
+			flex-wrap: wrap
+			padding: 5px 6px 56px 20px
+			+lg
+				padding: 5px 6px 25px 20px
+			+md
+				padding: 5px 6px 25px 15px
+			+sm
+				padding: 5px 10px 25px 10px
+
+	&__comp
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: flex-start
+		width: calc(25% - 15px)
+		min-height: 262px
+		padding: 12px 20px 23px
+		border-radius: 22px
+		background-color: $white
+		cursor: pointer
+		-webkit-tap-highlight-color: transparent
+		transition: .3s ease-in-out
+		+fs(16)
+		+lg
+			min-height: 232px
+			padding: 5px 20px 15px
+			+fs(13)
+		+md
+			width: calc(33.33333% - 10px)
+			min-height: 174px
+			padding: 12px 14px
+		+sm
+			width: calc(50% - 5px)
+			min-height: 155px
+			border-radius: 10px
+
+		#{$parent}_default &
+			margin-top: 15px
+			+md
+				margin-top: 10px
+
+			&:not(:nth-child(4n))
+				margin-right: 15px
+				+md
+					margin-right: 10px
+
+			&:not(:nth-child(3n))
+				+md
+					margin-right: 10px
+
+			&:nth-child(2n)
+				+sm
+					margin-right: 0 !important
+
+		&:hover
+			box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
+
+		&-img-wrap
+			display: block
+			margin-bottom: 8px
+
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: contain
+				font-family: 'object-fit: contain;'
+
+		&-title
+			padding-bottom: 10px
+			color: #717171
+			font-size: inherit
+			word-break: break-word
+			+sm
+				padding-bottom: 5px
+				+fs(10)
+
+		&-portion
+			position: relative
+			display: flex
+			align-items: center
+			margin-top: auto
+			padding-left: 22px
+			color: #9b9b9b
+			+lg
+				+fs(12)
+			+md
+				+fs(8)
+
+			&-icon
+				position: absolute
+				top: 2px
+				left: 0
+				+md
+					top: -1px
+					transform: scale(.65)
+
+			span
+				margin-right: 4px
+
+		&-visual
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			z-index: 1
+			border: 3px solid transparent
+			border-radius: 22px
+			transition: .3s ease-in-out
+			pointer-events: none
+			+sm
+				border-radius: 10px
+
+		&-control
+			display: none
+			&:checked ~ #{$parent}__comp-visual
+				border-color: $light-green
+				box-shadow: 13px 7px 30px rgba(0, 0, 0, 0.21)
+
+.print-ingreds
+	display: none

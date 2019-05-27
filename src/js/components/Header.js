@@ -48,7 +48,7 @@ class Header {
     })
 
     const navScene = new ScrollMagic.Scene({
-      offset: -58,
+      offset: -57,
       triggerElement: content,
       triggerHook: 0,
       duration: content.offsetHeight,
