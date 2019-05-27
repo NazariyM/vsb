@@ -91,6 +91,10 @@ class ExpandBlock {
   }
 }
 
+if (typeof NodeList.prototype.forEach !== 'function') {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
+
 const expandBlocks = document.querySelectorAll('.js-expand-block')
 
 expandBlocks.forEach(block => new ExpandBlock(block))
