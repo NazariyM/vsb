@@ -22,6 +22,10 @@
 		-webkit-print-color-adjust: exact
 		print-color-adjust: exact
 
+	tr,
+	img
+		page-break-inside: avoid
+
 	.icon-cups
 		display: block
 		width: 16px
@@ -33,24 +37,29 @@
 	.print-ingreds
 		display: block
 		&__container
-			display: flex
-			flex-wrap: wrap
+			&:after
+				content: " "
+				display: table
+				clear: both
 		&__title
 			display: block
 			margin-bottom: 15px
 
 		.category__comp
+			float: left
 			min-height: 170px
 			width: calc(50% - 10px)
 			font-size: 1.8rem
-			//page-break-inside: avoid
-			page-break-after: always
-			//page-break-before: always
+			page-break-inside: avoid
 			&:not(:nth-child(even))
 				margin-right: 10px
 			&:nth-child(2) ~ .category__comp
 				margin-top: 10px
 
+		.category__comp-title
+			page-break-inside: avoid
+		.category__comp-portion
+			page-break-inside: avoid
 		.category__comp-visual
 			display: none
 
@@ -62,8 +71,7 @@
 	.ingreds__count-btn,
 	.ingreds__actions,
 	.summary__bottom,
-	.summary__hint,
-	.summary__warn
+	.summary__hint
 		display: none
 
 	.main
@@ -73,7 +81,8 @@
 		margin-bottom: 10px
 
 	.content
-		padding: 140px 0 0
+		padding: 0
+
 	.content__title
 		display: none
 
@@ -120,6 +129,20 @@
 		padding: 2px 0 5px 40px
 	.summary__table-row:first-child~.summary__table-row .summary__table-data:first-child
 		padding: 2px 0 5px 40px
+	.summary__warn
+		padding: 8px 0 0
+		margin: 8px 12px 0
+		border: 0
+		border-top: 1px solid #979797
+		border-radius: 0
+	.summary__warn-head
+		margin-bottom: 10px
+	.summary__warn-icon
+		display: none
+	.summary__warn-list li
+		margin-bottom: 6px
+		padding-left: 20px
+
 	.ingreds
 		padding: 15px
 	.ingreds__count
