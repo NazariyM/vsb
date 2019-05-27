@@ -1,3 +1,4 @@
+import 'element-closest'
 import './components/animation'
 import './components/Header'
 import './components/ExpandBlock'
