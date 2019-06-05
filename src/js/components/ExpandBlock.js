@@ -69,10 +69,7 @@ class ExpandBlock {
     siblings.find(item => {
       const btn = item.children[0]
 
-      if (
-        item !== currentItem &&
-        btn.classList.contains(css.open)
-      ) {
+      if (item !== currentItem && btn.classList.contains(css.open)) {
         const content = item.children[1]
 
         content.style.height = `${content.dataset.height}px`
@@ -92,7 +89,7 @@ class ExpandBlock {
 }
 
 if (typeof NodeList.prototype.forEach !== 'function') {
-  NodeList.prototype.forEach = Array.prototype.forEach;
+  NodeList.prototype.forEach = Array.prototype.forEach
 }
 
 const expandBlocks = document.querySelectorAll('.js-expand-block')

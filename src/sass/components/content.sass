@@ -1,148 +1,140 @@
 .content
-   padding: 60px 0 0
-   +md
-      padding: 22px 0 0
-   +sm
-      position: relative
-      padding: 58px 0 0
-   
-   &__container
-      padding: 0 24px 0 52px
-      +lg
-         padding: 0 60px 0 52px
-   
-   &__title
-      margin-bottom: 44px
-      +lg
-         margin-bottom: 22px
-      +md
-         margin-bottom: 18px
-      +sm
-         display: none
-   
-   &__inner
-      display: flex
-      margin: 0 -11px
-      +lg
-         margin: 0 -9px
-      +md
-         margin: 0 -8px
-      +sm
-         margin: 0
-      &-wrap
-         +sm
-            max-width: 516px
-            margin: 0 auto
-            
-      &.swiper-wrapper
-         +rmin(767)
-            position: static
-            width: auto
-            height: auto
-            transform: none
-            box-sizing: border-box
-            transition: none
-            
-   &__col
-      padding: 0 11px
-      flex-grow: 0
-      flex-shrink: 1
-      +lg
-         padding: 0 9px
-         flex-shrink: 0
-      +md
-         padding: 0 8px
-      +sm
-         padding: 0
-         flex-shrink: 0
-         box-sizing: border-box
-      
-      &_categories
-         width: percentage(906 / 1364)
-         +lg
-            width: percentage(815 / 1168)
-         +md
-            width: percentage(467 / 744)
-         +sm
-            flex-basis: 300px
-            width: 300px
-            margin-right: 13px
-      &_side
-         width: percentage(479 / 1364)
-         +lg
-            width: percentage(382 / 1168)
-         +md
-            width: percentage(278 / 744)
-         +sm
-            flex-basis: 300px
-            width: 300px
-   
-   &__aside-block
-      visibility: hidden
-      border: 1px solid
-      border-radius: 22px
-      box-shadow: 13px 7px 30px rgba($black, .21)
-      +md
-         border-radius: 10px
-      +r(330)
-         visibility: visible
-      &:not(:last-child)
-         margin-bottom: 30px
-         +md
-            margin-bottom: 24px
+	padding: 60px 0 0
+	+md
+		padding: 22px 0 0
+	+sm
+		position: relative
+		padding: 58px 0 0
 
-   &__nav
-      visibility: hidden
-      display: none
-      position: absolute
-      top: 0
-      left: 0
-      width: 100%
-      justify-content: center
-      align-items: center
-      padding: 6px 0
-      transition: background-color .5s ease-in-out
-      z-index: 101
-      background-color: transparent
-      will-change: background-color
-      +sm
-         display: flex
-      &.is-fixed
-         position: fixed
-         box-shadow: 0 3px 25px 3px rgba($black, .36)
-         background-color: $white
-         
-      &-btn
-         position: relative
-         padding: 2px 24px 5px
-         border-radius: 50px
-         background: 0
-         +f('hel700', 17)
-         color: #69686A
-         transition: .5s ease-in-out
-         white-space: nowrap
-         will-change: left, right
-         &.is-active
-            background-color: $white
-            color: #0CC245
-            box-shadow: 7px 13px 30px rgba($black, .21)
-         .is-fixed &.is-active &
-            box-shadow: 3px 5px 5px rgba($black, .21)
-         &:nth-child(1)
-            +r(424)
-               left: -15%
-            +r(374)
-               left: -26%
-            &.is-active
-               +r(424)
-                  left: 10%
-               +r(374)
-                  left: 20%
-         &:nth-child(2)
-            +r(424)
-               right: -26%
-            &.is-active
-               +r(424)
-                  right: 10%
-               +r(374)
-                  right: 20%
+	&__container
+		padding: 0 24px 0 52px
+		+lg
+			padding: 0 60px 0 52px
+
+	&__title
+		margin-bottom: 44px
+		+lg
+			margin-bottom: 22px
+		+md
+			margin-bottom: 18px
+		+sm
+			display: none
+
+	&__inner
+		display: flex
+		margin: 0 -11px
+		+lg
+			margin: 0 -9px
+		+md
+			margin: 0 -8px
+		+sm
+			margin: 0
+
+		&-wrap
+			+sm
+				max-width: 516px
+				margin: 0 auto
+
+		&.swiper-wrapper
+			+rmin(767)
+				position: static
+				width: auto
+				height: auto
+				transform: none
+				box-sizing: border-box
+				transition: none
+
+	&__col
+		padding: 0 11px
+		flex-grow: 0
+		flex-shrink: 1
+		+lg
+			padding: 0 9px
+			flex-shrink: 0
+		+md
+			padding: 0 8px
+		+sm
+			padding: 0
+			flex-shrink: 0
+			box-sizing: border-box
+
+		&_categories
+			width: percentage(906 / 1364)
+			+lg
+				width: percentage(815 / 1168)
+			+md
+				width: percentage(467 / 744)
+			+sm
+				flex-basis: 300px
+				width: 300px
+				margin-right: 13px
+
+		&_side
+			width: percentage(479 / 1364)
+			+lg
+				width: percentage(382 / 1168)
+			+md
+				width: percentage(278 / 744)
+			+sm
+				flex-basis: 300px
+				width: 300px
+
+	&__aside-block
+		visibility: hidden
+		border: 1px solid
+		border-radius: 22px
+		box-shadow: 13px 7px 30px rgba($black, .21)
+		+md
+			border-radius: 10px
+		+r(330)
+			visibility: visible
+
+		&:not(:last-child)
+			margin-bottom: 30px
+			+md
+				margin-bottom: 24px
+
+	&__nav
+		visibility: hidden
+		display: none
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		justify-content: space-between
+		align-items: center
+		padding: 6px 0
+		transition: background-color .5s ease-in-out
+		z-index: 101
+		background-color: transparent
+		will-change: background-color
+		+sm
+			display: flex
+			padding: 6px 11px
+			
+		&.is-fixed
+			position: fixed
+			box-shadow: 0 3px 25px 3px rgba($black, .36)
+			background-color: $white
+
+		&-btn
+			position: relative
+			padding: 2px 24px 5px
+			border-radius: 50px
+			+f('hel700', 17)
+			transition: .5s ease-in-out
+			white-space: nowrap
+			will-change: left, right
+			background-color: $white
+			color: #0CC245
+			box-shadow: 7px 13px 30px rgba($black, .21)
+			+r(374)
+				padding: 2px 12px 5px
+
+			&.is-active
+				background: 0
+				color: #69686A
+				box-shadow: none
+
+			.is-fixed &.is-active &
+				box-shadow: 3px 5px 5px rgba($black, .21)
